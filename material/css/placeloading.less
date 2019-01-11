@@ -1,0 +1,24 @@
+.placeloading {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #f8f8f8;
+  background: linear-gradient(to right, #f8f8f8 30%, #eee 50%, #f8f8f8 70%);
+  background-size: 1000px 104px;
+  color: transparent !important;
+  box-shadow: none !important;
+  &.none-border {
+    border: none !important;
+  }
+}
+/*加载等待动画*/
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
