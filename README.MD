@@ -1,4 +1,4 @@
-# SHIPPETS
+# SNIPPETS
 
 ## 为啥要做这个？
 
@@ -20,7 +20,7 @@
 
 * [xmlHttpRequest中POST传输数据的几种方式](https://github.com/towersxu/shippets/blob/master/material/js/ajax/post.js)
 
-* [async,awite实现先发两个请求，成功后再发第3个请求](https://github.com/towersxu/shippets/blob/master/material/js/ajax/post.js)
+* [async,await实现先发两个请求，成功后再发第3个请求](https://github.com/towersxu/shippets/blob/master/material/js/ajax/post.js)
 
 * [获取一个颜色的反色](https://github.com/towersxu/shippets/blob/master/material/js/color/invertColor.js)
 
