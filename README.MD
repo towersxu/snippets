@@ -18,14 +18,14 @@
 
 ### js
 
-* [xmlHttpRequest中POST传输数据的几种方式](https://github.com/towersxu/shippets/blob/master/material/js/ajax/post.js)
+* [获取文件的MD5，file对象转blob](https://github.com/towersxu/shippets/blob/master/material/js/file/file.js)
+* [获取文件的后缀名](https://github.com/towersxu/shippets/blob/master/material/js/file/suffix.js)
 
-* [async,await实现先发两个请求，成功后再发第3个请求](https://github.com/towersxu/shippets/blob/master/material/js/ajax/post.js)
+* [xmlHttpRequest中POST传输数据的几种方式](https://github.com/towersxu/shippets/blob/master/material/js/ajax/post.js)
+* [async,await实现先发两个请求，成功后再发第3个请求](https://github.com/towersxu/snippets/blob/master/material/js/async/async.js)
 
 * [获取一个颜色的反色](https://github.com/towersxu/shippets/blob/master/material/js/color/invertColor.js)
-
 * [获取随机颜色](https://github.com/towersxu/shippets/blob/master/material/js/color/randomColor.js)
-
 * [获取随机16位数](https://github.com/towersxu/shippets/blob/master/material/js/random/randomHex.js)
 
 * [字符串方法padStart的polyfill](https://github.com/towersxu/shippets/blob/master/material/js/string/padStart.js)
@@ -33,14 +33,14 @@
 * [时间戳转换为指定个数的时间](https://github.com/towersxu/shippets/blob/master/material/js/time/timestampFormat.js)
 
 * [深度优先遍历](https://github.com/towersxu/shippets/blob/master/material/js/traversal/deep-traversal.js)
-
 * [广度优先遍历](https://github.com/towersxu/shippets/blob/master/material/js/traversal/breadth-traversal.js)
-
 * [对象的深拷贝,使用广度优先遍历解决对象的循环引用](https://github.com/towersxu/shippets/blob/master/material/js/traversal/copydeep.js)
 
 * [guid](https://github.com/towersxu/shippets/blob/master/material/js/uniqueId/guid.js)
-
 * [uuid](https://github.com/towersxu/shippets/blob/master/material/js/uniqueId/uuid.js)
+
+* [获取IE浏览器版本](https://github.com/towersxu/shippets/blob/master/material/js/browser/detectIE.js)
+* [获取浏览器的版本](https://github.com/towersxu/shippets/blob/master/material/js/browser/browser.js)
 
 ### nodejs
 
