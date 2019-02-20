@@ -53,3 +53,9 @@
 ### shell
 
 * [linux开放指定端口](https://github.com/towersxu/shippets/blob/master/material/shell/port.sh)
+
+### 安全
+
+* [flowplayer视频播发器XSS跨站漏洞](https://github.com/towersxu/shippets/blob/master/material/security/flowplayer.md)
+* [点击劫持:无X-Frame-Options头信息](https://github.com/towersxu/shippets/blob/master/material/security/xframe.md)
+* [跨站点请求伪造](https://github.com/towersxu/shippets/blob/master/material/security/csrf.md)
