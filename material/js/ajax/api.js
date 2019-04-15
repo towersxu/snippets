@@ -29,6 +29,25 @@ function debounce1 (fn1, timer) {
   }
 }
 
+function debounce(inner, ms = 30) {
+  let timer = null;
+  let resolves = [];
+
+  return function (...args) {
+    // Run the function after a certain amount of time
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      // Get the result of the inner function, then apply it to the resolve function of
+      // each promise that has been created since the last time the inner function was run
+      let result = inner(...args);
+      resolves.forEach(r => r(result));
+      resolves = [];
+    }, ms);
+
+    return new Promise(r => resolves.push(r));
+  };
+}
+
 let d = debounce1((fn) => {
   ajax().then(() => {
     fn('success')
@@ -43,19 +62,19 @@ function service (i) {
   })
 }
 
-service(4).then((r) => {
-  console.log(11, r)
-})
+// service(4).then((r) => {
+//   console.log(11, r)
+// })
 
-service(5).then((r) => {
-  console.log(22, r)
-})
+// service(5).then((r) => {
+//   console.log(22, r)
+// })
 
-setTimeout(() => {
-  service(6).then((r) => {
-    console.log(33, r)
-  })
-}, 1000)
+// setTimeout(() => {
+//   service(6).then((r) => {
+//     console.log(33, r)
+//   })
+// }, 1000)
 
 function ajax () {
   return new Promise((resolve, reject) => {
@@ -65,3 +84,26 @@ function ajax () {
     }, 3000)
   })
 }
+
+function ajax1 (flag) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log('in ajax')
+      resolve(`ajax ${flag}`)
+    }, 3100)
+  })
+}
+
+let debounceAjax = debounce(ajax)
+
+debounceAjax('firset').then((data) => {
+  console.log(data)
+})
+debounceAjax('sec').then((data) => {
+  console.log(data)
+})
+setTimeout(() => {
+  debounceAjax('third').then((data) => {
+    console.log(data)
+  })
+}, 1000)
