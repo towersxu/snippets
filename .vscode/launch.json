@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Cas",
+      "request": "launch",
+      "mainClass": "material.algorithm.Cas",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Test",
+      "request": "launch",
+      "mainClass": "material.algorithm.Test",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Test",
+      "request": "launch",
+      "mainClass": "Test",
+      "projectName": "shippets_48a5c638"
+    }
+  ]
+}
