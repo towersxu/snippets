@@ -32,15 +32,30 @@
 
 * [时间戳转换为指定个数的时间](https://github.com/towersxu/shippets/blob/master/material/js/time/timestampFormat.js)
 
-* [深度优先遍历](https://github.com/towersxu/shippets/blob/master/material/js/traversal/deep-traversal.js)
-* [广度优先遍历](https://github.com/towersxu/shippets/blob/master/material/js/traversal/breadth-traversal.js)
-* [对象的深拷贝,使用广度优先遍历解决对象的循环引用](https://github.com/towersxu/shippets/blob/master/material/js/traversal/copydeep.js)
-
 * [guid](https://github.com/towersxu/shippets/blob/master/material/js/uniqueId/guid.js)
 * [uuid](https://github.com/towersxu/shippets/blob/master/material/js/uniqueId/uuid.js)
 
 * [获取IE浏览器版本](https://github.com/towersxu/shippets/blob/master/material/js/browser/detectIE.js)
 * [获取浏览器的版本](https://github.com/towersxu/shippets/blob/master/material/js/browser/browser.js)
+
+### 算法
+
+* [时间复杂度LogN示例](https://github.com/towersxu/shippets/blob/master/material/algorithm/o.js)
+* [深度优先遍历](https://github.com/towersxu/shippets/blob/master/material/js/traversal/deep-traversal.js)
+* [广度优先遍历](https://github.com/towersxu/shippets/blob/master/material/js/traversal/breadth-traversal.js)
+* [对象的深拷贝,使用广度优先遍历解决对象的循环引用](https://github.com/towersxu/shippets/blob/master/material/js/traversal/copydeep.js)
+* [LRU算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/lru.js)
+* [最短路径-迪杰斯特拉算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/graph.js)
+
+<details>
+<summary>查看更多</summary>
+
+- JAVA
+  * [Cas](https://github.com/towersxu/shippets/blob/master/material/algorithm/Cas.js)
+
+- JS
+  * [插入排序](https://github.com/towersxu/shippets/blob/master/material/algorithm/Cas.js)
+</details>
 
 ### nodejs
 
@@ -59,3 +74,11 @@
 * [flowplayer视频播发器XSS跨站漏洞](https://github.com/towersxu/shippets/blob/master/material/security/flowplayer.md)
 * [点击劫持:无X-Frame-Options头信息](https://github.com/towersxu/shippets/blob/master/material/security/xframe.md)
 * [跨站点请求伪造](https://github.com/towersxu/shippets/blob/master/material/security/csrf.md)
+
+### C/C++
+
+* [数组越界](https://github.com/towersxu/shippets/blob/master/material/c++/array-bound.cpp)
+
+### Media
+
+* [调用摄像头](https://github.com/towersxu/shippets/blob/master/material/media/getUserMedia.js)
