@@ -82,3 +82,9 @@
 ### Media
 
 * [调用摄像头](https://github.com/towersxu/shippets/blob/master/material/media/getUserMedia.js)
+
+## BUGS
+
+* [开发中遇到未找到原因的问题](https://github.com/towersxu/shippets/blob/master/bugs/unresolve.md)
+* [移动端开发遇到的问题](https://github.com/towersxu/shippets/blob/master/bugs/mobile.md)
+* [其它问题](https://github.com/towersxu/shippets/blob/master/bugs/other.md)
