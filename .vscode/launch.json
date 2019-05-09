@@ -1,6 +1,12 @@
 {
   "configurations": [
     {
+      "type": "node",
+      "request": "launch",
+      "name": "nodejs",
+      "program": "${file}"
+    },
+    {
       "type": "java",
       "name": "CodeLens (Launch) - Cas",
       "request": "launch",

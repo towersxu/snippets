@@ -1,4 +1,4 @@
-let arr = [412, 34, 31, 32, 12]
+let arr = [11, 8, 3, 9, 7, 1, 2, 5]
 function MergeSort (arr) {
   MergeSortC(arr, 0, arr.length - 1)
 }
@@ -17,11 +17,12 @@ function MergeSortC (arr, startIndex, endIndedx) {
 }
 
 function merge (arr, startIndex, middleIndex, endIndedx) {
+  debugger
   console.log(arr, startIndex, middleIndex, endIndedx)
   let newArr = []
   let k = 0
   let j = middleIndex + 1
-  while (startIndex <= middleIndex && (j < endIndedx)) {
+  while (startIndex <= middleIndex && (j <= endIndedx)) {
     if (arr[startIndex] <= arr[j]) {
       newArr[k++] = arr[startIndex++]
     } else {
@@ -30,7 +31,7 @@ function merge (arr, startIndex, middleIndex, endIndedx) {
   }
   let start = startIndex
   let end = middleIndex
-  if (j <= endIndedx) { // 表示后半部分没有排序完成
+  if (j < endIndedx) { // 表示后半部分没有排序完成
     start = j
     end = endIndedx
   }
@@ -38,6 +39,6 @@ function merge (arr, startIndex, middleIndex, endIndedx) {
     newArr[k++] = arr[start++]
   }
   for (let i = 0; i < endIndedx; i++) {
-    arr[i] = newArr[i]
+    arr[startIndex + i] = newArr[i]
   }
 }

@@ -3,3 +3,14 @@
 - 华为nova系列手机webview百度定位问题
 
   当时没有手机在身边复现，但是武研测试有。H5的地理位置API失败，百度地图自带的获取位置也失败。换成高德地图就好了。
+
+- IOS.12.2 `input type="file"`使用trigger('click')的方式触发上传，在校信上失效的问题，微信有效。
+
+  微信使用的自带的x5webview，校信使用的是系统webview，另外，QQ扫码进入页面使用是系统webview,点击聊天内容的链接进入的用的是x5webview???
+  
+  解决方法： 改为display: block; opacity: 0这种写法，而不是用js去触发点击。
+
+  PS: IOS系统的webview还有`navigator.geolocation.getCurrentPosition`在非完全https站点（网站有http请求的图片）失效的问题。
+  
+  参考链接:
+  [WebKit on iOS ignores trigger(‘click’) on file input](https://forums.meteor.com/t/webkit-on-ios-ignores-trigger-click-on-file-input/29828)
