@@ -10,3 +10,5 @@
 
   小雪在展开dropdown的时候，dropdown里面的一个多选的list的checkbox在动画的过程中位置会偏移。动画结束后则恢复正常。经过调试发现：把transform: scaleY(0)给去掉就好了。或者将transition的时间延长，改成4秒就没有问题。如果在1秒以内，则会出现这个问题。而且在同一个电脑，连接双屏的时候，同一个浏览器一个屏幕是好的，一个屏幕是有问题的。
   ![img](./images/demo1.jpg)
+
+- 在单点登陆系统中，Safari浏览器无法登陆的问题？当用户主动访问SSO服务的域名时，是可以写入Cookie的。并且之后能作为第三方网站读写Cookie，而不影响原有登录过程。所以SSO服务对外提供添加Cookie的URL。允许添加cookie，并根据service参数跳转回原始页面。在这样处理了后，iphone和imac以及一些macbook pro上的Safari能登陆了，但是还有一些电脑是不行的。经过确认，这些电脑也没有改过Safari的隐私模式。

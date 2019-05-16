@@ -1,0 +1,39 @@
+/* tasks.json */
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-array-bound",
+      "command": "clang++",
+      "args": [
+        "-o",
+        "array-bound", // executable
+        "${workspaceRoot}/material/c++/array-bound.cpp", // main file
+        "-g",
+        "-v",
+        "-fno-stack-protector"
+      ],
+      "type": "shell",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": {
+        "owner": "cpp",
+        "fileLocation": [
+          "relative",
+          "${workspaceRoot}/material/c++"
+        ],
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      }
+    }
+  ]
+}

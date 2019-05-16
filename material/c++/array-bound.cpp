@@ -32,6 +32,9 @@
  * i都会在数组之后压栈,只会循环4次;
  * 如果关闭堆栈保护功能,则会出现死循环。
  * 请参考:https://www.ibm.com/developerworks/cn/linux/l-cn-gccstack/index.html
+ * 
+ * 为什么i明明先定义，arr[3]就是i了呢？
+ * 因为：局部变量在栈上存储，栈是从高地址到低地址，因此地址逐渐减小。
  */
 
 int main(int argc, char *argv[])
@@ -41,6 +44,8 @@ int main(int argc, char *argv[])
   for (; i <= 3; i++)
   {
     arr[i] = 0;
+    printf("%ld\n", (long int)&arr[i]);
+    printf("%d\n", i);
     printf("hello world\n");
   }
 }

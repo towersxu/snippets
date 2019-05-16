@@ -19,6 +19,28 @@
       "request": "launch",
       "mainClass": "material.algorithm.Test",
       "projectName": "shippets_48a5c638"
+    },
+    {
+      "name": "C++ Launch array-bound",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceRoot}/array-bound",
+      "preLaunchTask": "build",
+      "internalConsoleOptions": "openOnSessionStart",
+      "logging": {
+        "moduleLoad": false,
+        "programOutput": true,
+        "trace": false
+      },
+      "showDisplayString": false,
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceRoot}",
+      "environment": [],
+      "externalConsole": true, // set true to enable keyboard input
+      "osx": {
+        "MIMode": "lldb"
+      }
     }
   ]
 }
