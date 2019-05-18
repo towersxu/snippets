@@ -14,7 +14,6 @@ function trans (p) {
       return '\\' + $2
     })
   }).join(' ')
-  console.log(cmd)
   process.exec(cmd, function (err, stdout, stderr) {
     console.log(err)
     console.log(stdout)
