@@ -1,6 +1,13 @@
 {
   "configurations": [
     {
+      "type": "java",
+      "name": "CodeLens (Launch) - Knapsack",
+      "request": "launch",
+      "mainClass": "material.algorithm.design.Knapsack",
+      "projectName": "shippets_48a5c638"
+    },
+    {
       "type": "node",
       "request": "launch",
       "name": "nodejs",
@@ -37,7 +44,7 @@
       "stopAtEntry": false,
       "cwd": "${workspaceRoot}",
       "environment": [],
-      "externalConsole": true, // set true to enable keyboard input
+      "externalConsole": true,
       "osx": {
         "MIMode": "lldb"
       }
