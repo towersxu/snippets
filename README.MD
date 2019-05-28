@@ -46,15 +46,19 @@
 * [对象的深拷贝,使用广度优先遍历解决对象的循环引用](https://github.com/towersxu/shippets/blob/master/material/js/traversal/copydeep.js)
 * [LRU算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/lru.js)
 * [最短路径-迪杰斯特拉算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/graph.js)
+* [排序算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/sort/readme.md)
 
 <details>
 <summary>查看更多</summary>
 
-- JAVA
   * [Cas](https://github.com/towersxu/shippets/blob/master/material/algorithm/Cas.js)
+  
+  * [背包问题](https://github.com/towersxu/shippets/blob/master/material/algorithm/design/knapsack.js)
 
-- JS
-  * [插入排序](https://github.com/towersxu/shippets/blob/master/material/algorithm/Cas.js)
+  * [字符串匹配-BM算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/string/bm.js)
+
+  * [字符串匹配-KMP算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/string/kmp.js)
+  
 </details>
 
 ### nodejs
