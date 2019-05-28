@@ -12,18 +12,4 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 
-
-let moveZero = (arr) => {
-  let point = -1
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] != 0 && point !== -1) {
-      arr[point] = arr[i]
-      arr[i] = 0
-      point++
-    } else if (point === -1 && arr[i] === 0) {
-      point = 0
-    }
-  }
-  return arr
-}
-console.log(moveZero(arr))
+console.log(arr)
