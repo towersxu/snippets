@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - TopoSort",
+      "request": "launch",
+      "mainClass": "material.algorithm.sort.TopoSort",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - Knapsack",
       "request": "launch",
       "mainClass": "material.algorithm.design.Knapsack",

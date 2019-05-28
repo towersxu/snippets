@@ -1,6 +1,7 @@
 /**
  * 图的 “最短路径” 问题
  * 迪杰斯特拉算法
+ * E*logV
  */
 
 /**
@@ -143,3 +144,4 @@ g.addEdge('E', 'G', 7)
 g.addEdge('F', 'G', 3)
 // g.getGraphEdges()
 g.dijkstra('A', 'G')
+g.dijkstra2('A', 'G')
