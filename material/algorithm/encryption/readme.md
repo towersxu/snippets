@@ -11,3 +11,5 @@
 ## DES（Data Encryption Standard，数据加密标准）
 
 ## AES（Advanced Encryption Standard，高级加密标准）
+
+## 整数质因子分解算法
