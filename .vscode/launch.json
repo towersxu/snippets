@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - FindMiddle",
+      "request": "launch",
+      "mainClass": "material.algorithm.leetcode.FindMiddle",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - TopoSort",
       "request": "launch",
       "mainClass": "material.algorithm.sort.TopoSort",
