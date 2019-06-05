@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Atoi",
+      "request": "launch",
+      "mainClass": "material.algorithm.leetcode.Atoi",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - Reverse",
       "request": "launch",
       "mainClass": "material.algorithm.leetcode.Reverse",
