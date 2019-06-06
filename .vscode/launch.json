@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - MaxArea",
+      "request": "launch",
+      "mainClass": "material.algorithm.leetcode.MaxArea",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - RegMatch",
       "request": "launch",
       "mainClass": "material.algorithm.leetcode.RegMatch",
