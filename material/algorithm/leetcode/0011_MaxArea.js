@@ -3,10 +3,11 @@ function MaxArea (h) {
   let l = 0
   let r = h.length - 1
   while (l < r) {
-    max = Math.max(max, Math.min(h[l], h[r]) * (r - l))
     if (h[r] > h[l]) {
+      max = Math.max(max, h[l] * (r - l))
       l++
     } else {
+      max = Math.max(max, h[r] * (r - l))
       r--
     }
   }
