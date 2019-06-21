@@ -2,6 +2,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - ThreeSumClosest",
+      "request": "launch",
+      "mainClass": "material.algorithm.leetcode.ThreeSumClosest",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - ThreeSum",
+      "request": "launch",
+      "mainClass": "material.algorithm.leetcode.ThreeSum",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - LongestCommonPrefix",
       "request": "launch",
       "mainClass": "material.algorithm.leetcode.LongestCommonPrefix",
