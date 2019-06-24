@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - LetterCombinations",
+      "request": "launch",
+      "mainClass": "material.algorithm.leetcode.LetterCombinations",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - ThreeSumClosest",
       "request": "launch",
       "mainClass": "material.algorithm.leetcode.ThreeSumClosest",
