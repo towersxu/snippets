@@ -12,3 +12,7 @@
   ![img](./images/demo1.jpg)
 
 - 在单点登陆系统中，Safari浏览器无法登陆的问题？当用户主动访问SSO服务的域名时，是可以写入Cookie的。并且之后能作为第三方网站读写Cookie，而不影响原有登录过程。所以SSO服务对外提供添加Cookie的URL。允许添加cookie，并根据service参数跳转回原始页面。在这样处理了后，iphone和imac以及一些macbook pro上的Safari能登陆了，但是还有一些电脑是不行的。经过确认，这些电脑也没有改过Safari的隐私模式。
+
+- 手机浏览器文件下载附件名问题
+  
+  对于下载的文件，我们可以通过`Response.AppendHeader("ContentDisposition","attachment;filename=FileName.txt")`来控制。但是UC浏览器会出现文件名变成两个，小米浏览器会出现文件名+uft8字母。QQ浏览器则没有问题。

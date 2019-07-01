@@ -30,6 +30,8 @@
 
 * [字符串方法padStart的polyfill](https://github.com/towersxu/shippets/blob/master/material/js/string/padStart.js)
 
+* [中划线字符串转驼峰](https://github.com/towersxu/shippets/blob/master/material/js/string/classify.js)
+  
 * [时间戳转换为指定个数的时间](https://github.com/towersxu/shippets/blob/master/material/js/time/timestampFormat.js)
 
 * [guid](https://github.com/towersxu/shippets/blob/master/material/js/uniqueId/guid.js)
@@ -37,6 +39,8 @@
 
 * [获取IE浏览器版本](https://github.com/towersxu/shippets/blob/master/material/js/browser/detectIE.js)
 * [获取浏览器的版本](https://github.com/towersxu/shippets/blob/master/material/js/browser/browser.js)
+
+* [debounce和throttle](https://github.com/towersxu/shippets/blob/master/material/js/programing/debounceAndThrottle.js)
 
 ### 算法
 
