@@ -42,29 +42,6 @@
 
 * [debounce和throttle](https://github.com/towersxu/shippets/blob/master/material/js/programing/debounceAndThrottle.js)
 
-### 算法
-
-* [时间复杂度LogN示例](https://github.com/towersxu/shippets/blob/master/material/algorithm/o.js)
-* [深度优先遍历](https://github.com/towersxu/shippets/blob/master/material/js/traversal/deep-traversal.js)
-* [广度优先遍历](https://github.com/towersxu/shippets/blob/master/material/js/traversal/breadth-traversal.js)
-* [对象的深拷贝,使用广度优先遍历解决对象的循环引用](https://github.com/towersxu/shippets/blob/master/material/js/traversal/copydeep.js)
-* [LRU算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/lru.js)
-* [最短路径-迪杰斯特拉算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/graph.js)
-* [排序算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/sort/readme.md)
-
-<details>
-<summary>查看更多</summary>
-
-  * [Cas](https://github.com/towersxu/shippets/blob/master/material/algorithm/Cas.js)
-  
-  * [背包问题](https://github.com/towersxu/shippets/blob/master/material/algorithm/design/knapsack.js)
-
-  * [字符串匹配-BM算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/string/bm.js)
-
-  * [字符串匹配-KMP算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/string/kmp.js)
-  
-</details>
-
 ### nodejs
 
 * [express开启cros](https://github.com/towersxu/shippets/blob/master/material/nodejs/cros.js)
@@ -96,3 +73,50 @@
 * [开发中遇到未找到原因的问题](https://github.com/towersxu/shippets/blob/master/bugs/unresolve.md)
 * [移动端开发遇到的问题](https://github.com/towersxu/shippets/blob/master/bugs/mobile.md)
 * [其它问题](https://github.com/towersxu/shippets/blob/master/bugs/other.md)
+
+
+### 算法
+
+* [时间复杂度LogN示例](https://github.com/towersxu/shippets/blob/master/material/algorithm/o.js)
+* [深度优先遍历](https://github.com/towersxu/shippets/blob/master/material/js/traversal/deep-traversal.js)
+* [广度优先遍历](https://github.com/towersxu/shippets/blob/master/material/js/traversal/breadth-traversal.js)
+* [对象的深拷贝,使用广度优先遍历解决对象的循环引用](https://github.com/towersxu/shippets/blob/master/material/js/traversal/copydeep.js)
+* [LRU算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/lru.js)
+* [最短路径-迪杰斯特拉算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/graph.js)
+* [排序算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/sort/readme.md)
+
+<details>
+<summary>查看更多</summary>
+
+  * [Cas](https://github.com/towersxu/shippets/blob/master/material/algorithm/Cas.js)
+  
+  * [背包问题](https://github.com/towersxu/shippets/blob/master/material/algorithm/design/knapsack.js)
+
+  * [字符串匹配-BM算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/string/bm.js)
+
+  * [字符串匹配-KMP算法](https://github.com/towersxu/shippets/blob/master/material/algorithm/string/kmp.js)
+  
+</details>
+
+<details>
+  <summary>leetcode</summary>
+  
+  * [0001_两数之和](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0001_TwoSum.js)
+  * [0002_链表两数之和](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0002_TwoLinkSum.js)
+  * [0003_最长不重复子字符串](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0003_lengthOfLongestSubstring.js)
+  * [0004_找中位数](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0004_findMedianSortedArrays.js)
+  * [0005_最长回文子字符串](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0005_longestPalindrome.js)
+  * [0006_Z字排列](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0006_ConvertZ.java)
+  * [0007_数字反转](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0007_Reverse.java)
+  * [0008_字符串转数字](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0008_Atoi.java)
+  * [0009_判断回文数字](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0009_Palindrome.java)
+  * [0010_简单正则](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0010_RegMatch.java)
+  * [0011_数字最大区域](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0011_MaxArea.java)
+  * [0012_数字转罗马数字](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0012_IntToRoman.java)
+  * [0013_罗马数字转数字](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0012_RomanToInt.java)
+  * [0014_最长公共前缀字符串](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0014_LongestCommonPrefix.java)
+  * [0015_三数之和](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0015_ThreeSum.java)
+  * [0016_三数之和最接近](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0016_ThreeSumClosest.java)
+  * [0017_电话号码的字母组合](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0017_LetterCombinations.java)
+
+</details>
