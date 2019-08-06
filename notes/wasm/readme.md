@@ -75,3 +75,58 @@ ccall/cwrap潜在风险
 ### main函数与生命周期
 
 通常情况下，就算是c中的main函数执行完成后，在js中仍然可以调用c中的函数。但是如果在编译的时候，加上参数NO_EXIT_RUNTIME=0,则会在main函数执行完成之后，无法调用C中的其他函数了。
+
+### 文件系统
+
+有三种文件系统
+
+内存文件系统（MEMFS）
+
+Node.js文件系统（NODEFS）
+
+IndexedDB文件系统（IDBFS）
+
+Emscripten同步文件系统API通过JavaScript对象`FS`封装了上述三种文件系统，进而供`fopen()`/`fread()`/`fwrite()`等libc/libcxx文件访问函数调用。
+
+IDBFS仍然是使用内存来存储虚拟文件系统，只不过IDBFS可以通过FS.syncfs()方法进行内存数据与IndexedDB的双向同步，以达到数据持久化存储的目的。FS.syncfs()是异步操作.
+
+### 内存管理
+
+Emscripten当前版本（v 1.38.11）默认的内存容量为16MB，栈容量为5MB。
+
+使用TOTAL_MEMORY参数控制内存容量
+
+`emcc mem.cc -s TOTAL_MEMORY=67108864 -o mem.js`
+
+栈容量可以通过TOTAL_STACK参数控制
+
+由于WebAssembly内存单位为页，1页=64KB，因此当编译目标为wasm时，TOTAL_MEMORY必须为64KB的整数倍。
+
+除了通过TOTAL_MEMORY参数在编译时设定内存容量外，还可以通过预设Module对象TOTAL_MEMORY属性值的方法设定内存容量
+
+```js
+<script>
+  var Module = {
+      TOTAL_MEMORY : 134217728
+  }
+</script>
+```
+
+Emscripten提供了可在运行时扩大内存容量的模式，欲开启该模式，需要在编译时增加-s ALLOW_MEMORY_GROWTH=1参数
+
+`内存分配器`
+
+- `dlmalloc` 默认值。由Doug Lea创建的内存分配器，其变种广泛使用于Linux等。
+
+- `emmalloc` 专为Emscripten设计的内存分配器。
+
+emmalloc的代码体积小于dlmalloc，但是如果程序中频繁申请大量的小片内存，使用dlmalloc性能较好。
+
+### 在胶水代码前后分别插入其它js
+
+emcc hello.cc --pre-js pre.js --post-js post.js -o pre_hello_post.js
+
+## 常见方法
+
+在新版的Emscripten（v1.37.26以后）环境下，运行时默认不随main()函数退出而退出，Module在网页关闭前一直可用，因此无需使用emscripten_set_main_loop()来保持程序处于活动状态。
+
