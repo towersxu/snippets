@@ -4,6 +4,8 @@
 
 [宏](https://github.com/towersxu/snippets/blob/master/notes/c%2B%2B/%E5%AE%8F.md)
 
+[c++多继承的二义性](https://github.com/towersxu/snippets/blob/master/notes/c++多继承的二义性.md)
+
 ## 计算机科学与技术
 
 [深入理解堆与栈](https://github.com/towersxu/snippets/blob/master/notes/cs/%E5%A0%86%E4%B8%8E%E6%A0%88.md)
