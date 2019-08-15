@@ -39,6 +39,7 @@
 
 * [获取IE浏览器版本](https://github.com/towersxu/shippets/blob/master/material/js/browser/detectIE.js)
 * [获取浏览器的版本](https://github.com/towersxu/shippets/blob/master/material/js/browser/browser.js)
+* [获取当前的宿主环境](https://github.com/towersxu/shippets/blob/master/material/js/browser/global.js)
 
 * [debounce和throttle](https://github.com/towersxu/shippets/blob/master/material/js/programing/debounceAndThrottle.js)
 
