@@ -112,6 +112,13 @@
       "program": "${file}"
     },
     {
+      "type": "chrome",
+      "request": "launch",
+      "name": "typescript chrome",
+      "url": "/Users/jhy/vimax/shippets/demo/typescript/demo1/index.html",
+      "webRoot": "/Users/jhy/vimax/shippets/demo/typescript/demo1"
+    },
+    {
       "type": "java",
       "name": "CodeLens (Launch) - Cas",
       "request": "launch",
