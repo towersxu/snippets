@@ -12,7 +12,26 @@
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
           if (xhr.status >= 200 && xhr.status < 300) {
-            resolve(JSON.parse(xhr.responseText))
+            resolve({
+              body: xhr.responseText, // todo: 转换为stream
+              json: function () {
+                return new Promise((resolve, reject) => {
+                  resolve(JSON.parse(this.body))
+                })
+              },
+              text: function () {
+                return new Promise((resolve, reject) => {
+                  resolve(this.body)
+                })
+              },
+              blob: function () {},
+              arrayBuffer: function () {},
+              status: xhr.status,
+              statusText: 'OK',
+              url: xhr.responseURL,
+              type: 'basic',
+              ok: true
+            })
           } else {
             reject(xhr)
           }
