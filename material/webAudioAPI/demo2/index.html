@@ -5,11 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="./style.css" rel="stylesheet">
 </head>
 <body>
   <canvas id="canvas" width="512" height="256"></canvas>
   <button id="play">play</button>
   <button id="stop">stop</button>
+  <div>
+    <span>音量</span>
+    <span>0</span>
+    <input type="range" id="volume" class="control-panner"  min="0" max="1" value="0.5" step="0.02"/>
+    <span>1</span>
+    <span>当前值：<span id="volume-value">0</span></span>
+  </div>
+  <div>
+    <span>水平声道</span>
+    <span>0</span>
+    <input type="range" id="panner" min="-1" max="1" value="0" step="0.01" />
+    <span>1</span>
+    <span>当前值：<span id="panner-value">0</span></span>
+  </div>
+  <div>
+    <span>垂直声道</span>
+    <span>0</span>
+    <input type="range" id="pannerY" min="-1" max="1" value="0" step="0.01" />
+    <span>1</span>
+    <span>当前值：<span id="pannerY-value">0</span></span>
+  </div>
+  <div>
+    <button id="randomSound">生成随机噪声</button>
+    <button id="addSound">添加随机噪声</button>
+  </div>
   <script type="module" src="./demo2.js"></script>
 </body>
 </html>
