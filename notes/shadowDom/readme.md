@@ -41,5 +41,7 @@ html模板是指`<template></template>`报告的模板，该模板不会直接�
 ## 参考资料
 
 [Shadow DOM v1：独立的网络组件](https://developers.google.com/web/fundamentals/web-components/shadowdom)
+
 [MDN Web Components](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components)
+
 [影子DOM（Shadow DOM）](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components/%E5%BD%B1%E5%AD%90_DOM)
