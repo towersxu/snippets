@@ -19,6 +19,7 @@
 ### js
 
 * [获取文件的MD5，file对象转blob](https://github.com/towersxu/shippets/blob/master/material/js/file/file.js)
+* [arraybuffer的应用场景](https://github.com/towersxu/shippets/blob/master/material/js/file/arraybuffer/arraybuffer.md)
 * [获取文件的后缀名](https://github.com/towersxu/shippets/blob/master/material/js/file/suffix.js)
 
 * [xmlHttpRequest中POST传输数据的几种方式](https://github.com/towersxu/shippets/blob/master/material/js/ajax/post.js)
@@ -60,6 +61,7 @@
 * [flowplayer视频播发器XSS跨站漏洞](https://github.com/towersxu/shippets/blob/master/material/security/flowplayer.md)
 * [点击劫持:无X-Frame-Options头信息](https://github.com/towersxu/shippets/blob/master/material/security/xframe.md)
 * [跨站点请求伪造](https://github.com/towersxu/shippets/blob/master/material/security/csrf.md)
+* [密码学知识汇总](https://github.com/towersxu/snippets/tree/master/material/algorithm/encryption)
 
 ### C/C++
 
@@ -121,3 +123,33 @@
   * [0017_电话号码的字母组合](https://github.com/towersxu/shippets/blob/master/material/algorithm/leetcode/0017_LetterCombinations.java)
 
 </details>
+
+## 笔记
+
+[记录平时学习的内容](https://github.com/towersxu/snippets/tree/master/notes)
+
+## interview
+
+### css面试相关
+
+[css模块化](https://github.com/towersxu/snippets/blob/master/interview/css/css%E6%A8%A1%E5%9D%97%E5%8C%96.md)
+
+[postcss](https://github.com/towersxu/snippets/blob/master/interview/css/postcss.md)
+
+### electron面试相关
+
+[主进程和渲染器进程的区别](https://github.com/towersxu/snippets/blob/master/interview/electron/1_%E4%B8%BB%E8%BF%9B%E7%A8%8B%E4%B8%8E%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB.md)
+
+[如何在两个网页间共享数据](https://github.com/towersxu/snippets/blob/master/interview/electron/2_%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%A4%E4%B8%AA%E7%BD%91%E9%A1%B5%E9%97%B4%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE.md)
+
+### js面试相关
+
+[promise的polyfill中如果实现微任务的](https://github.com/towersxu/snippets/blob/master/interview/js/promise%E7%9A%84polyfill%E4%B8%AD%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%BE%AE%E4%BB%BB%E5%8A%A1%E7%9A%84.md)
+
+### webpack
+
+[webpack笔记](https://github.com/towersxu/snippets/blob/master/interview/webpack/vue%E9%A1%B9%E7%9B%AEwebpack%E5%8D%87%E7%BA%A7%E7%AC%94%E8%AE%B0.md)
+
+### 其它
+
+[什么是AMP](https://github.com/towersxu/snippets/blob/master/interview/performance/apm.md)

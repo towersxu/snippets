@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    Module = {};
+    Module.onRuntimeInitialized = function () {
+      Module._print_data();
+      var int_ptr = Module._get_int_ptr();
+      console.log(int_ptr) // 地址 =>1656
+      // Module.HEAP32: 根据地址获取值。
+      // 等同于new Int32Array(buffer)
+      // 表示一个开辟的内存空间
+      // int_ptr >> 2; 右移动两位是因为buffer被转换成Int32Array,
+      // 表示每个元素占用4字节(一个字节8位)。所以除以4.除以4表示向右移两位
+      var int_value = Module.HEAP32[int_ptr >> 2]
+      console.log(int_value) // => 42
+      var double_ptr = Module._get_double_ptr()
+      console.log(double_ptr)
+      var double_value = Module.HEAPF64[double_ptr >> 3]
+      console.log(double_value)
+    }
+  </script>
+  <script src="./mem.js"></script>
+</body>
+</html>
