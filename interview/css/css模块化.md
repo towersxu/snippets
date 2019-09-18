@@ -93,3 +93,14 @@ module: {
   ]
 }
 ```
+
+Q： 项目中如何解决CSS样式冲突的问题？特别是开发公共插件的时候，如何保证插件的样式不被业务覆盖？
+
+就目前要兼容IE9的情况下，是没有完美的方案的。目前主要的方案有：
+
+1、命名约定，BEM之类的
+2、css in js js动态向Dom插入style比如styled-jsx、style-components
+3、css-module 将class随机命名成hash字符串
+4、vue scoped 基于属性选择进行限制
+
+目前提供的方案最好的方案是shadow dom

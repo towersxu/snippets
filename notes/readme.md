@@ -43,3 +43,5 @@ npm link
 ## 其它
 
 [indexDb](https://github.com/towersxu/snippets/tree/master/notes/other/indexdb.md)
+
+[shadowDom](https://github.com/towersxu/snippets/tree/master/notes/shadowDom)

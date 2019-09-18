@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .wrapper {
+    height: 200px !important;
+  }
+  .my-location {
+    color: red;
+  }
+  </style>
+</head>
+<body>
+  <div>
+    <p>这里是Shadow dom示例</p>
+    <shadow-user id="shadow" src="https://baidu.com/favicon.ico">
+    <p class="my-location" slot="location">aaaa</p>
+    </shadow-user>
+    <script type="module" src="./shadowDom.js" ></script>
+    <script src="demo.js"></script>
+  </div>
+</body>
+</html>
