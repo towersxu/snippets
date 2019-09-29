@@ -27,3 +27,9 @@
   [getContext('2d') returns null in Safari 10](https://stackoverflow.com/questions/40482586/getcontext2d-returns-null-in-safari-10/43482153)
 
   [Maximum size of a <canvas> element](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element)
+
+5.IOS webview禁止识别手机号，邮箱等
+
+```html
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no" />
+```
