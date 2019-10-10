@@ -1,7 +1,8 @@
+
 .sieves {
   position: relative;
-  perspective: 1000px;
-  perspective-origin: 100% 100%;
+  /* perspective: 1000px;
+  perspective-origin: 100% 100%; */
   width: 300px;
   height: 300px;
   margin: 100px auto;

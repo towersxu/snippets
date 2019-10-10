@@ -1,0 +1,239 @@
+body {
+  font-size:.9em;
+  font-family:sans-serif;
+}
+@keyframes spin {
+    0% { transform: translateZ(-100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    16% { transform: translateZ(-100px) rotateX(180deg) rotateY(180deg) rotateZ(0deg); }
+    33% { transform: translateZ(-100px) rotateX(360deg) rotateY(90deg) rotateZ(180deg); }
+    50% { transform: translateZ(-100px) rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+    66% { transform: translateZ(-100px) rotateX(180deg) rotateY(360deg) rotateZ(270deg); }
+    83% { transform: translateZ(-100px) rotateX(270deg) rotateY(180deg) rotateZ(180deg); }
+    100% { transform: translateZ(-100px) rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+@keyframes spin-duplicate {
+    0% { transform: translateZ(-100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    16% { transform: translateZ(-100px) rotateX(180deg) rotateY(180deg) rotateZ(0deg); }
+    33% { transform: translateZ(-100px) rotateX(360deg) rotateY(90deg) rotateZ(180deg); }
+    50% { transform: translateZ(-100px) rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+    66% { transform: translateZ(-100px) rotateX(180deg) rotateY(360deg) rotateZ(270deg); }
+    83% { transform: translateZ(-100px) rotateX(270deg) rotateY(180deg) rotateZ(180deg); }
+    100% { transform: translateZ(-100px) rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+@keyframes roll {
+    0% { transform: translate3d(-200px,-50px,-400px) }
+    12% { transform: translate3d(0px,0,-100px) }
+    25% { transform: translate3d(200px,-50px,-400px) }
+    37% { transform: translate3d(0px,-100px,-800px) }
+    50% { transform: translate3d(-200px,-50px,-400px) }
+    62% { transform: translate3d(0px,0,-100px) }
+    75% { transform: translate3d(200px,-50px,-400px) }
+    87% { transform: translate3d(0px,-100px,-800px) }
+    100% { transform: translate3d(-200px,-50px,-400px) }
+}
+#roll:checked ~ #platform > #dice {
+    animation: spin-duplicate 2s infinite linear;
+}
+#roll:checked ~ #platform {
+    width:200px;
+    height:200px;
+    transform-style: preserve-3d;
+    animation: roll 1.6s infinite linear;
+}
+#secondroll:checked ~ #roll:checked ~ #platform > #dice,
+#secondroll:checked ~ #roll:checked ~ #platform {
+    animation-play-state: paused;
+}
+#wrapper {
+    position: relative;
+    width: 200px;
+    padding-top: 100px;
+    margin: 0 auto;
+    perspective: 1200px;
+}
+#platform {
+  margin-top:100px;
+}
+#dice span {
+    position:absolute;
+    margin:100px 0 0 100px;
+    display: block;
+    font-size: 2.5em;
+    padding: 10px;
+}
+#dice {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: spin 50s infinite linear;
+}
+.side {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    box-shadow:inset 0 0 40px #ccc;
+    border-radius: 40px;
+}
+#dice .cover, #dice .inner {
+    background: #e0e0e0;
+    box-shadow: none;
+}
+#dice .cover {
+    border-radius: 0;
+    transform: translateZ(0px);
+}
+#dice .cover.x {
+    transform: rotateY(90deg);
+}
+#dice .cover.z {
+    transform: rotateX(90deg);
+}
+#dice .front  {
+    transform: translateZ(100px);
+}
+#dice .front.inner  {
+    transform: translateZ(98px);
+}
+#dice .back {
+    transform: rotateX(-180deg) translateZ(100px);
+}
+#dice .back.inner {
+    transform: rotateX(-180deg) translateZ(98px);
+}
+#dice .right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+#dice .right.inner {
+    transform: rotateY(90deg) translateZ(98px);
+}
+#dice .left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+#dice .left.inner {
+    transform: rotateY(-90deg) translateZ(98px);
+}
+#dice .top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+#dice .top.inner {
+    transform: rotateX(90deg) translateZ(98px);
+}
+#dice .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+#dice .bottom.inner {
+    transform: rotateX(-90deg) translateZ(98px);
+}
+.dot {
+    position:absolute;
+    width:46px;
+    height:46px;
+    border-radius:23px;
+    background:#444;
+    box-shadow:inset 5px 0 10px #000;
+}
+.dot.center {
+    margin:77px 0 0 77px;
+}
+.dot.dtop {
+    margin-top:20px;
+}
+.dot.dleft {
+    margin-left:134px;
+}
+.dot.dright {
+    margin-left:20px;
+}
+.dot.dbottom {
+    margin-top:134px;
+}
+.dot.center.dleft {
+    margin:77px 0 0 20px;
+}
+.dot.center.dright {
+    margin:77px 0 0 134px;
+}
+
+#background {
+	position:fixed;
+	z-index:-1;
+	width:100%;
+	height:100%;
+	background: #071a1e;
+	background: -moz-linear-gradient(top, #071a1e 0%, #274249 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#071a1e), color-stop(100%,#274249));
+	background: -webkit-linear-gradient(top, #071a1e 0%,#274249 100%);
+	background: linear-gradient(to bottom, #071a1e 0%,#274249 100%);
+}
+label, input[type=checkbox]:before {
+	position: absolute;
+	overflow:hidden;
+	top:40px;
+	left:40px;
+	display:block;
+	width:120px;
+	padding-top:9px;
+	height:31px;
+	cursor:pointer;
+	text-align:center;
+	font-size:1.2em;
+	font-weight:bold;
+	color:#fff;
+	border-radius:6px;
+	border:1px solid;
+}
+input[type=checkbox]:before {
+	background:transparent;
+	border-color:transparent;
+}
+input[type=checkbox] {
+	display:none;
+}
+label {
+	opacity:.5;
+	transition:all .3s ease;
+}
+label:hover {
+	opacity:1;
+	box-shadow:0 0 18px rgba(255,255,255,.5);
+}
+label[for=roll] {
+	z-index:1;
+	text-shadow:0 -1px 0 #006699;
+	border-color:#17C7EC;
+	background: -moz-linear-gradient(top, #0099CC 0%, #006699 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0099CC), color-stop(100%,#006699));
+	background: -webkit-linear-gradient(top, #0099CC 0%,#006699 100%);
+	background: linear-gradient(to bottom, #0099CC 0%,#006699 100%);
+}
+label[for=secondroll] {
+	margin-top:-100px;
+	text-shadow:0 -1px 0 #CC0033;
+	border-color:#FF8298;
+	background: -moz-linear-gradient(top, #FF6666 0%, #CC0033 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FF6666), color-stop(100%,#CC0033));
+	background: -webkit-linear-gradient(top, #FF6666 0%,#CC0033 100%);
+	background: linear-gradient(to bottom, #FF6666 0%,#CC0033 100%);
+}
+#roll:checked ~ label[for=roll] {
+	margin-top:-100px;
+}
+#roll:checked ~ label[for=secondroll] {
+	margin-top:0px;
+}
+#secondroll:checked ~ label[for=secondroll] {
+	text-shadow:0 -1px 0 #336633;
+	border-color:#66FF99;
+	background: -moz-linear-gradient(top, #66CC66 0%, #336633 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#66CC66), color-stop(100%,#336633));
+	background: -webkit-linear-gradient(top, #66CC66 0%,#336633 100%);
+	background: linear-gradient(to bottom, #66CC66 0%,#336633 100%);
+}
+#secondroll:checked ~ label[for=secondroll] span {
+	display:none;
+}
+#secondroll:checked ~ label[for=secondroll]:after {
+	content:"Keep rollin'!";
+}
