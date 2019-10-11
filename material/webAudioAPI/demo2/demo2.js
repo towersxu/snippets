@@ -1,7 +1,8 @@
 import CAudioNode from './audio.js'
 
 // let url = '../audio/music.mp3'
-let url = '../audio/Tonight_I_Feel_Close_To_You.mp3'
+// let url = '../audio/Tonight_I_Feel_Close_To_You.mp3'
+let url = '../audio/demo3.emp3'
 // let url = '../audio/piano.mp3'
 
 function loadMusic (url) {
@@ -19,8 +20,14 @@ let cAudioNode
 function play () {
   loadMusic(url)
   .then((arrayBuffer) => {
+    var arr = new Uint8Array(arrayBuffer);
+    // var str = [];
+    // 解码示例
+    for (let i = 0; i < arr.length; i++) {
+      arr[i] = arr[i] ^ 0x11
+    }
     cAudioNode = new CAudioNode();
-    cAudioNode.start(arrayBuffer);
+    cAudioNode.start(arr.buffer);
   })
 }
 
