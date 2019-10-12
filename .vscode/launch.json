@@ -2,105 +2,7 @@
   "configurations": [
     {
       "type": "java",
-      "name": "CodeLens (Launch) - LetterCombinations",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.LetterCombinations",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - ThreeSumClosest",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.ThreeSumClosest",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - ThreeSum",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.ThreeSum",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - LongestCommonPrefix",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.LongestCommonPrefix",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - RomanToInt",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.RomanToInt",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - IntToRoman",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.IntToRoman",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - MaxArea",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.MaxArea",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - RegMatch",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.RegMatch",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - Solution",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.Solution",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - Atoi",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.Atoi",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - Reverse",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.Reverse",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - ConvertZ",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.ConvertZ",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - FindMiddle",
-      "request": "launch",
-      "mainClass": "material.algorithm.leetcode.FindMiddle",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - TopoSort",
-      "request": "launch",
-      "mainClass": "material.algorithm.sort.TopoSort",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - Knapsack",
+      "name": "Java - Knapsack",
       "request": "launch",
       "mainClass": "material.algorithm.design.Knapsack",
       "projectName": "shippets_48a5c638"
@@ -141,13 +43,6 @@
       "name": "CodeLens (Launch) - Cas",
       "request": "launch",
       "mainClass": "material.algorithm.Cas",
-      "projectName": "shippets_48a5c638"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - Test",
-      "request": "launch",
-      "mainClass": "material.algorithm.Test",
       "projectName": "shippets_48a5c638"
     },
     {
