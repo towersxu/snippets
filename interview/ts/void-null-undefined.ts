@@ -6,9 +6,10 @@
 
 let unusable: void = undefined;
 
-function warnUser(): void {
+function warnUser() {
   console.log("This is my warning message");
 }
+
 
 /**
  * undefined和null两者各自有自己的类型分别叫做undefined和null
