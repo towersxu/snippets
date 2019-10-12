@@ -2,7 +2,16 @@
 
 typescript中readonly有什么用？它和const有什么区别？
 
-你了解装饰器中的@readonly吗？
+typescript只读属性
+
+```ts
+interface Point {
+  readonly x: number;
+  readonly y: number;
+}
+```
+
+## 你了解装饰器中的@readonly吗
 
 假设需要你来实现装饰器@readonly的polyfill，你的思路是啥？
 

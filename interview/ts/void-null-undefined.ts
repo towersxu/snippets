@@ -31,4 +31,14 @@ console.log(age);
  * 可以使用联合类型string | null | undefined。
  */
 
+interface T {
+  a: Number,
+  b: String,
+  c?: any
+}
+const obj: T = {
+  a: 1,
+  b: 'string'
+};
 
+obj.c = null;
