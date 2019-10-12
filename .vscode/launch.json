@@ -112,6 +112,24 @@
       "program": "${file}"
     },
     {
+      "name": "Typescript Inspector",
+      "type": "node",
+      "request": "launch",
+      "args": [
+        "${file}"
+      ],
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "TS_NODE_IGNORE": "false"
+      }
+    },
+    {
       "type": "chrome",
       "request": "launch",
       "name": "typescript chrome",
