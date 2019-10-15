@@ -1,3 +1,13 @@
+/**
+ * 使用interface声明全局变量
+ */
+interface Window {
+  dd: any;
+}
+
+/**
+ * 声明函数
+ */
 interface SearchFunc {
   (name: string, type: number): boolean;
 }
