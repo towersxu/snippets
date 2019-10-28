@@ -33,3 +33,7 @@
 三、修改后还是上传不了，日期提示open() "/var/lib/nginx/tmp/client_body/0000000045" failed (13: Permission denied)
 
 查看/var/lib/nginx 目录，发现权限是drwx------，权限不足，修改为chomd -R 755 nginx
+
+## travis中执行nodejs脚本ssh2连接会出现security问题
+
+这个是服务器这边拒绝了，改用秘钥的形式就好了。腾讯云服务器我没有找到配置白名单的地方，虽然配置了不一定有效。

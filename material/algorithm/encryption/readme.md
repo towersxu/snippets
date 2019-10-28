@@ -223,3 +223,5 @@ Output FeedBack mode 输出反馈模式
 [HTTPs入门, 图解SSL从回车到握手](https://zhuanlan.zhihu.com/p/25587986)
 
 [对称加密算法和分组密码的模式](https://www.jianshu.com/p/b63095c59361)
+
+[在线加密工具网站](http://tool.chacuo.net/cryptaes)

@@ -33,3 +33,7 @@
 ```html
   <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no" />
 ```
+
+6.有些手机上传的图片会被旋转90度
+
+  可以尝试用exif.js来解决
