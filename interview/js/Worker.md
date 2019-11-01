@@ -166,3 +166,4 @@ self.addEventListener('fetch', function(event) {
 不通过主进程进行中转，而是在主进程中创建一个MessageChannel，将它作为第二个参数传入worker，然后work用它来通信。
 
 [MessageChannel是什么，怎么使用](https://www.jianshu.com/p/4f07ef18b5d7)
+[Worker中的OffscreenCanvas渲染实践与浅析](https://yrq110.me/post/front-end/offscreen-canvas-practice/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)

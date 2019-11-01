@@ -20,6 +20,9 @@
 
 #### es6
 
+- proxy
+- reflect
+
 #### vue
 
 #### react
@@ -88,3 +91,7 @@ mongo
 - MessageChannel既可以在worker中通信，也可以在iframe来通信。是宏任务，但是比setTimeout(0)
 - Worklet 是浏览器渲染流中的钩子，可以让我们有浏览器渲染进程中底层的权限，比如样式和布局。Houdini、CSS TYPE OM
 - AudioWorklet
+
+2019年11月01日
+
+- @babel/preset-env、browserslist、core-js、useBuiltInt(usage、entry)
