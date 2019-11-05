@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex</title>
+  <style>
+    .flex-father {
+      display: flex;
+      flex-flow: row wrap;
+      width: 500px;
+      height: 250px;
+      justify-content: space-around;
+      border: 1px solid grey;
+      align-items: center;
+      float: left;
+    }
+    .flex-item {
+      width: 100px;
+      height: 100px;
+    }
+    .flex-item2 {
+      width: 200px;
+      height: 200px;
+    }
+    .red {
+      background: red;
+    }
+    .green {
+      background: green;
+    }
+    .blue {
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <div>xxxx</div>
+  <div class="flex-father">
+    <div class="flex-item red"></div>
+    <div class="flex-item flex-item2 green"></div>
+    <div class="flex-item blue"></div>
+    <div class="flex-item green"></div>
+    <div class="flex-item green"></div>
+    <div class="flex-item green"></div>
+  </div>
+</body>
+</html>

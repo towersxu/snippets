@@ -1,5 +1,7 @@
 # CSS模块化方案分类
 
+最初css模块化是指@import
+
 ## 命名约定
 
 BEM(Block__Element--Modifier)

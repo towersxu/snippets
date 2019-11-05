@@ -8,6 +8,8 @@
 
 #### css
 
+flex: 50%
+
 #### js
 
 - worker 80%
@@ -32,6 +34,10 @@
 #### nodejs
 
 todo: [分享 10 道 Nodejs 进程相关面试题](https://juejin.im/post/5d082214f265da1bb564f97b)
+
+#### 浏览器
+
+- 浏览器渲染流程 80%
 
 ### 扩展知识
 
@@ -68,30 +74,3 @@ java基础语法
 sql
 
 mongo
-
-## 记录
-
-2019年10月28日
-
-- windowOrWorkerGlobalScop、worker、postmessage、结构化克隆算法
-- blob如何转换成base64 FileReader、atob/btoa、Uint8Array、“=”填充
-- String.fromCharCode(number): 将utf-16编码转换为字符串
-- openAL
-- OffscreenCanvas(离屏Canvas), 可以在worker中使用
-
-2019年10月29日
-
-- [Web Worker、Service Worker 和 Worklet](https://juejin.im/entry/5c50f22ef265da616b1115a3)
-- worker里面可以继续使用new Worker
-- DedicatedWorkerGlobalScope
-- ServiceWorker、SharedWorker
-- 浏览器渲染页面的流程
-- 线程与进程
-- event loop以及微任务、宏任务； vue nextTick->mutationObserver->2.5+->MessageChannel
-- MessageChannel既可以在worker中通信，也可以在iframe来通信。是宏任务，但是比setTimeout(0)
-- Worklet 是浏览器渲染流中的钩子，可以让我们有浏览器渲染进程中底层的权限，比如样式和布局。Houdini、CSS TYPE OM
-- AudioWorklet
-
-2019年11月01日
-
-- @babel/preset-env、browserslist、core-js、useBuiltInt(usage、entry)
