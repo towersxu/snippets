@@ -1,0 +1,20 @@
+{
+  "name": "shippets",
+  "version": "1.0.0",
+  "description": "个人代码片段和笔记",
+  "main": "index.js",
+  "scripts": {
+    "tar": "tar -zcf - deploy.sh |openssl des3 -salt -k ${private_key} | dd of=deploy.sh.des3;tar -zcf - taox.pub |openssl des3 -salt -k ${private_key} | dd of=taox.pub.des3",
+    "untar": "dd if=deploy.sh.des3 |openssl des3 -d -k ${private_key} | tar zxf -;dd if=taox.pub.des3 |openssl des3 -d -k ${private_key} | tar zxf -"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/towersxu/shippets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/towersxu/shippets/issues"
+  },
+  "homepage": "https://github.com/towersxu/shippets#readme"
+}

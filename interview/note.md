@@ -102,7 +102,7 @@ content-position: center | start | end | flex-start | flex-end
 
 overflow-position: unsafe | safe
 
-*align-items*属性定义子元素在交叉轴上的对齐方式: center, flex-start, star等
+*align-items*属性定义子元素在交叉轴上的对齐方式: center, flex-start, start等
 
 *align-content*属性设置了浏览器如何沿着伸缩盒子容器（flexbox container）的纵轴和网格容器（Grid Container）的主轴在内容项之间和周围分配空间。该属性对单行弹性盒子模型无效。（即：带有flex-wrap: nowrap）。 取值有: center, start, flex-start, space-between.
 
@@ -125,4 +125,56 @@ overflow-position: unsafe | safe
 *flex*: 子元素简写属性，用来设置 flex-grow, flex-shrink 与 flex-basis。
 
 - clip-path: CSS 属性可以创建一个只有元素的部分区域可以显示的剪切区域。区域内的部分显示，区域外的隐藏。剪切区域是被引用内嵌的URL定义的路径或者外部svg的路径，或者作为一个形状例如circle().。clip-path属性代替了现在已经弃用的剪切 clip属性. 这个属性IE10也支持，但是在IE10上只支持url的方式。
+
+## 2019年11月06日
+
+vue的`compile`分为`parse`、`optimize`、`generate`3个阶段，最终得到render function。
+
+*parse*阶段是利用正则表达式对template模板进行字符串解析（parseHTML, 在parseHTML的过程中就进行的AST元素的构建），得到指令、class、style等数据, 形成类似抽象语法树（默认中的javascript表达式没有进行语法分析，这也是vue在生成render的时候使用with的原因）。注意，这里的匹配是从前往后依次匹配的（词法分析-扫描），在while循环外部通过index记录匹配到哪里了，在while里面，通过正则，来截断html字符串，增加index。直到html字符串被全部匹配完。
+
+*optimize*是用来标记这个节点是不是静态节点，优化效率，主要是判断这个节点是否有v-if,v-for,bind等
+
+```js
+function isStatic (node: ASTNode): boolean {
+  if (node.type === 2) { // expression
+    return false
+  }
+  if (node.type === 3) { // text
+    return true
+  }
+  return !!(node.pre || (
+    !node.hasBindings && // 不是动态绑定
+    !node.if && !node.for && // 不是v-if,v-else v-for
+    !isBuiltInTag(node.tag) && // 不是内置的tag(slot, components)
+    isPlatformReservedTag(node.tag) && // 不是组件
+    !isDirectChildOfTemplateFor(node) &&
+    Object.keys(node).every(isStaticKey)
+  ))
+}
+```
+
+*generate*阶段是将AST转换为render function字符串
+
+- 词法分析: 词法分析阶段是编译过程的第一个阶段。这个阶段的任务是从左到右一个字符一个字符地读入源程序，即对构成源程序的字符流进行扫描然后根据构词规则识别单词(也称单词符号或符号)。
+- 语法分析: 语法分析是编译过程的一个逻辑阶段。语法分析的任务是在词法分析的基础上将单词序列组合成各类语法短语，如“程序”，“语句”，“表达式”等等.语法分析程序判断源程序在结构上是否正确.源程序的结构由上下文无关文法描述.
+- 语义分析: 语义分析是编译过程的一个逻辑阶段. 语义分析的任务是对结构上正确的源程序进行上下文有关性质的审查, 进行类型审查.
+
+- with
+
+```js
+var a, x, y;
+var r = 10, r1 = 20;
+Math.r = 100;
+with (Math) {
+  a = PI * r * r1; // 这里r是100， r1是20
+  x = r * cos(PI);
+  y = r * sin(PI / 2);
+}
+console.log(a, x, y) // 6283.185307179587 -100 100
+```
+
+可以看到，with里面的变量，默认指向的是Math,而不是window. 所以，with的作用是使用一个块里面的代码片段所声明的变量，默认在with这个对象上找，如果找不到再去外部变量找（这个时候查找会相对较慢）。还有缺点是语义不明，如果Math.r属性在代码中没有，而是对象自带的，可能会引起误解。所以不推荐使用。
+
+在vue template转render中使用了with(this)，其意义是把template属性中的表达式绑定到this.比如template中有v-bind:click="clickHandle", 这里在转换后，clickHandle中的this就会绑定为vue实例。
+
 

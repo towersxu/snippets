@@ -11,3 +11,7 @@
 [前端测试体系建设与最佳实践](https://mp.weixin.qq.com/s?__biz=MzI5MjYyODYyNQ==&mid=2247483987&idx=1&sn=132aea5d5185a1e4fa2fab5037a2fb3e&scene=21#wechat_redirect)
 
 [剖析 Vue.js 内部运行机制](https://github.com/answershuto/VueDemo)
+
+[AST for JavaScript developers](https://itnext.io/ast-for-javascript-developers-3e79aeb08343)
+
+[AST for JavaScript developers中文翻译](https://www.jianshu.com/p/019d449a9282)

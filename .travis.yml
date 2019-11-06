@@ -1,0 +1,19 @@
+language: node_js
+os: osx
+node_js:
+- 10.16.3
+addons:
+  ssh_known_hosts:
+  - hippor.com
+  - 123.207.101.120
+script:
+- npm run untar
+cache:
+  directories:
+  - node_modules
+deploy:
+- provider: script
+  skip_cleanup: true
+  script: bash ./deploy.sh
+  on:
+    branch: master
