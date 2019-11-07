@@ -20,3 +20,6 @@
 16. flex属性有那些？
 17. vue的template 模板是怎样通过 Compile 编译的？
 18. 在vue的render时使用到了with, with是什么？有什么用？
+19. vue的响应式系统是怎么实现的？一个vue组件的实例会有多少个watcher?
+20. vue的vnode是什么？
+21. vue的diff算法是如何计算的？

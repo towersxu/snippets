@@ -12,6 +12,8 @@ flex: 50%
 
 #### js
 
+- 对象的方法defineProperty, Object.fronze
+
 - worker 80%
   todo: [webworker动态化，无需JS文件创建worker](https://zhuanlan.zhihu.com/p/83001302)
   todo: [ServiceWorker demo](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API)
@@ -26,6 +28,9 @@ flex: 50%
 - reflect
 
 #### vue
+
+- api复习一遍
+- 源码阅读 30%
 
 #### react
 

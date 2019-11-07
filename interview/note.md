@@ -177,4 +177,20 @@ console.log(a, x, y) // 6283.185307179587 -100 100
 
 在vue template转render中使用了with(this)，其意义是把template属性中的表达式绑定到this.比如template中有v-bind:click="clickHandle", 这里在转换后，clickHandle中的this就会绑定为vue实例。
 
+- vue的响应式系统，首先data返回的对象的所有属性都被Object.defineProperty定义getter和setter方法，在getter中将当前的watcher对象（Dep.target, 如果存在的话）存放到依赖收集对象dep中。在setter的时候，将对象的变更发布给所有的watcher。那什么时候Dep.target是指向的watcher的呢？watcher是在mountComponent的时候创建的，就是说这个组件被挂载的时候（还有就是computed、watch的时候也会创建watcher），Dep.target就是指向这个组件的Watcher。所以，一个watch对应着一个组件的data，如果有computed、watch，在这个时候也会分别在创建watcher对象来对应。
+
+mountComponent -> 创建 watcher -> watcher绑定到Dep.target上。 set的时候触发get，get将当前的watcher(可以理解为一个全局变量Dep.target)放到这个属性的订阅者列表`subs`中(这里有一个在watcher中过滤的过程`addDep`，就是如果watcher已经被加入到subs中了，是不会再次加入的。)
+
+set的时候，通知这个属性的subs中的所有watcher
+
+- vnode是一个描述vue节点信息的对象，是对真实DOM的映射。这个对象的属性包含了节点名称，子节点，节点上的属性等信息
+
+- vue和react的diff算法都是只比较同层级的不一样的差异，然后将这些差异更新到视图上。因为在项目中，节点的变化大多数都是隐藏、显示和文本的更新。
+
+vue是如何判断两个节点不一样的？判断两个节点的key、 tag、 isComment、data同时定义或者不定义、input标签的话要类型相同。
+
+在当新老 VNode 节点都是 isStatic（静态的），并且 key 相同时，只要将 componentInstance 与 elm 从老 VNode 节点“拿过来”即可。这里的 isStatic 也就是前面提到过的「编译」的时候会将静态节点标记出来，这样就可以跳过比对的过程。
+
+当新 VNode 节点是文本节点的时候，直接用 setTextContent 来设置 text，这里的 nodeOps 是一个适配层，根据不同平台提供不同的操作平台 DOM 的方法，实现跨平台。
+
 
