@@ -23,3 +23,9 @@
 19. vue的响应式系统是怎么实现的？一个vue组件的实例会有多少个watcher?
 20. vue的vnode是什么？
 21. vue的diff算法是如何计算的？
+22. typescript的交叉类型、联合类型、类型保护、类型断言是啥？
+23. type和interface的区别？
+24. 什么是泛型？
+25. typescript中我们见到的.d.ts文件有什么用？
+26. typescript中的声明合并是什么？
+27. 如何使用typescript写一个iterator？

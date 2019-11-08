@@ -22,6 +22,8 @@ flex: 50%
 
 - performance 10%
 
+- typescript 30%
+
 #### es6
 
 - proxy
@@ -65,6 +67,10 @@ linux
 算法思想
 
 leetcode
+
+## 设计模式
+
+[设计模式题](https://mp.weixin.qq.com/s/Q1AZB-Y1aFT0uUorcJhBBA)
 
 ### java
 
