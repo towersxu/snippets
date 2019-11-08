@@ -15,3 +15,5 @@
 [AST for JavaScript developers](https://itnext.io/ast-for-javascript-developers-3e79aeb08343)
 
 [AST for JavaScript developers中文翻译](https://www.jianshu.com/p/019d449a9282)
+
+[JavaScript Reflect Metadata 详解](https://www.jianshu.com/p/653bce04db0b)

@@ -28,4 +28,8 @@
 24. 什么是泛型？
 25. typescript中我们见到的.d.ts文件有什么用？
 26. typescript中的声明合并是什么？
-27. 如何使用typescript写一个iterator？
+27. typescript怎么写iterator？
+28. typescript怎么写装饰器？
+29. JavaScript Reflect Metadata是什么？
+
+
