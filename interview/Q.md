@@ -31,5 +31,5 @@
 27. typescript怎么写iterator？
 28. typescript怎么写装饰器？
 29. JavaScript Reflect Metadata是什么？
-
+30. 贪心、回溯、分治、动态规划是什么？有什么区别？
 
