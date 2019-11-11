@@ -18,7 +18,11 @@ function getMd (path) {
 
 getMd(path.resolve(__dirname, './'))
 mdPath.map((p) => {
-  let name = getHashCode(p) + '.md'
+  let name = ''
+  if (/[\u4e00-\u9fa5_a-zA-Z0-9]+\.md/.test(p)) {
+    name = RegExp.$1
+  }
+  name = name + getHashCode(p) + '.md'
   fs.copyFileSync(p, path.resolve(__dirname, '../source/_posts/', name))
 })
 

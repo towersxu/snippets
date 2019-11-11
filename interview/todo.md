@@ -58,6 +58,11 @@ TCP/UDP
 
 linux
 
+- 常见命令
+- scp
+- sftp
+
+
 ### 刷题
 
 [Daily-Interview-Question](https://github.com/Advanced-Frontend/Daily-Interview-Question)
