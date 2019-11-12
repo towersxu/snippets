@@ -18,7 +18,7 @@ CSS 属性 *perspective*指定了观察者与 z=0 平面的距离，使具有三
 
 三维元素在观察者后面的部分不会绘制出来，即 z 轴坐标值大于 perspective 属性值的部分。
 
-![coordinate](https://github.com/towersxu/snippets/blob/master/img/coordinate.png)
+![coordinate](https://github.com/towersxu/snippets/raw/master/img/coordinate.png)
 
 CSS3中的3D坐标系与上面的左手坐标系有一定区别的，相当于其绕着X轴旋转了180度。但是css3的3d坐标系还是属于左手坐标系。
 
