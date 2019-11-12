@@ -25,7 +25,7 @@
 21. vue的diff算法是如何计算的？
 22. typescript的交叉类型、联合类型、类型保护、类型断言是啥？
 23. type和interface的区别？
-24. 什么是泛型？
+24. 什么是typescript的泛型，有什么用？
 25. typescript中我们见到的.d.ts文件有什么用？
 26. typescript中的声明合并是什么？
 27. typescript怎么写iterator？
@@ -33,4 +33,5 @@
 29. JavaScript Reflect Metadata是什么？
 30. 贪心、回溯、分治、动态规划是什么？有什么区别？
 31. js有那些方法可以检测浏览器是否支持CSS某些写法？
-
+32. 如何计算出一组数中有序对的个数？
+33. 背包问题和0-1背包问题是什么？有什么区别？
