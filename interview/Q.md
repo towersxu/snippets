@@ -32,4 +32,5 @@
 28. typescript怎么写装饰器？
 29. JavaScript Reflect Metadata是什么？
 30. 贪心、回溯、分治、动态规划是什么？有什么区别？
+31. js有那些方法可以检测浏览器是否支持CSS某些写法？
 
