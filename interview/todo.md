@@ -32,7 +32,7 @@ flex: 50%
 #### vue
 
 - api复习一遍
-- 源码阅读 30%
+- 源码阅读 80%
 
 #### react
 
@@ -62,14 +62,15 @@ linux
 - scp
 - sftp
 
-
 ### 刷题
 
 [Daily-Interview-Question](https://github.com/Advanced-Frontend/Daily-Interview-Question)
 
 ### 算法
 
-算法思想
+算法思想： 贪心、回溯、分治、动态规划 80%
+
+排序：冒泡、插入、快速、归并 90%
 
 leetcode
 
