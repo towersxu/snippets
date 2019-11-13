@@ -42,6 +42,15 @@ flex: 50%
 
 todo: [分享 10 道 Nodejs 进程相关面试题](https://juejin.im/post/5d082214f265da1bb564f97b)
 
+### 测试
+
+jest
+
+mocha
+
+istanbul
+
+
 #### 浏览器
 
 - 浏览器渲染流程 80%
