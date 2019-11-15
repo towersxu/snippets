@@ -17,5 +17,6 @@
   "bugs": {
     "url": "https://github.com/towersxu/shippets/issues"
   },
-  "homepage": "https://github.com/towersxu/shippets#readme"
+  "homepage": "https://github.com/towersxu/shippets#readme",
+  "dependencies": {}
 }

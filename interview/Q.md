@@ -44,4 +44,11 @@
 40. 在自定义遍历器iterator函数的时候？可以写next和return，return有什么用？
 41. ISP是什么？
 42. JS的TypedArray是什么？有什么用？
+43. generator函数如何自执行？
+44. ArrayBuffer和SharedArrayBuffer有什么用？Atomics是什么？
+45. http有多少种请求方式？
+46. 数据库的事务具有哪些特性？
+47. 数据库范式是那些？
+48. 悲观锁和乐观锁的区别？
+
 
