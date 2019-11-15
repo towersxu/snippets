@@ -6,13 +6,13 @@
 2. 如果想要typescript写，又怎么配置使typescript和babel相互配合？
 3. 浏览器有多少种进程？
 4. 什么是浏览器的渲染进程？他有哪些线程？webworker和他是什么关系？
-5. 说一下你对js是单线程的这句话的理解？
+5. 说一下你对js是单线程的这句话的理解？在浏览器中还是什么其它线程？
 6. GUI渲染线程有什么作用？
-7. render树是啥？
-8. DOMContentLoaded和load事件有什么区别
-9. 什么是CSS硬件加速，如何实现CSS硬件加速
+7. 浏览器的render树是啥？
+8. DOMContentLoaded和load事件有什么区别？
+9. 什么是CSS硬件加速，如何实现CSS硬件加速，盲目的使用CSS硬件加速会有什么问题？
 10. 为什么在开发的过程中，我们常用setTimeout模拟setInterval，或者特殊场合直接用requestAnimationFrame
-11. reduce方法怎么用
+11. 数组的reduce方法怎么用？
 12. js中`a >>> 0`是什么意思？有什么用？
 13. js中`2 ** 10` 是什么意思？
 14. js中的this有那几种情况？
@@ -36,4 +36,12 @@
 32. 如何计算出一组数中有序对的个数？
 33. 背包问题和0-1背包问题是什么？有什么区别？
 34. 说说http、http2、http3
-35. vue 3.0为什么选择proxy？proxy是什么？reflect是什么？
+35. vue 3.0为什么选择proxy？proxy是什么，有什么用？reflect是什么，有什么用？
+36. 如何禁止修改一个对象，让其readonly？为什么CONST不行, 如果是用preventExtensions？
+37. js的严格模式和非严格模式的区别
+38. caller和callee的区别？
+39. generator在实际中有那些应用？
+40. 在自定义遍历器iterator函数的时候？可以写next和return，return有什么用？
+41. ISP是什么？
+42. JS的TypedArray是什么？有什么用？
+
