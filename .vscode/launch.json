@@ -2,6 +2,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - InterfaceImplementExample",
+      "request": "launch",
+      "mainClass": "demo.java.InterfaceImplementExample",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - StringTest",
+      "request": "launch",
+      "mainClass": "demo.java.StringTest",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
       "name": "Java - Knapsack",
       "request": "launch",
       "mainClass": "material.algorithm.design.Knapsack",

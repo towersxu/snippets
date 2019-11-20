@@ -18,8 +18,8 @@ function getMd (path) {
 
 getMd(path.resolve(__dirname, './'))
 
-let dir = path.resolve(__dirname, '../source/_posts')
-delDir(dir)
+// let dir = path.resolve(__dirname, '../source/_posts')
+// delDir(dir)
 
 mdPath.map((p) => {
   let name = ''
