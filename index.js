@@ -18,14 +18,19 @@ function getMd (path) {
 
 getMd(path.resolve(__dirname, './'))
 
-// let dir = path.resolve(__dirname, '../source/_posts')
-// delDir(dir)
+let dir = path.resolve(__dirname, '../source/_posts')
+delDir(dir)
 
 mdPath.map((p) => {
   let name = ''
-  if (/(\w+?)\/([\u4e00-\u9fa5_a-zA-Z0-9]+)?\.md/.test(p)) {
-    name = `${RegExp.$2}(${RegExp.$1}).md`
-    fs.copyFileSync(p, path.resolve(__dirname, '../source/_posts/', name))
+  if (/(\w*?)\/(\w+?)\/([\u4e00-\u9fa5_a-zA-Z0-9]+)?\.md/.test(p)) {
+    name = `${RegExp.$3}.md`
+    let p1 = RegExp.$1
+    let p2 = RegExp.$2
+    let pa = path.resolve(__dirname, `../source/_posts/${p1}/${p2}`)
+    dirCreate(pa, function () {
+      fs.copyFileSync(p, path.resolve(pa, name))
+    })
   }
 })
 
@@ -44,5 +49,23 @@ function delDir(path, deep) {
     if (deep) {
       fs.rmdirSync(path);
     }
+  }
+}
+/**
+ * 判断路径是否存在，如果不存在则不显示
+ * @param {string} p 路径
+ */
+function dirCreate(p, cb) {
+  let parent = path.dirname(p)
+  if (fs.existsSync(parent)) { // 如果父级存在，则直接创建
+    if (!fs.existsSync(p)) { // 如果当前文件目录已经存在
+      fs.mkdirSync(p) // 如果不存在，这创建次目录
+    }
+    cb()
+  } else { // 不存在则先创建父级
+    dirCreate(parent, function () {
+      fs.mkdirSync(p) // 如果不存在，这创建次目录
+      cb()
+    })
   }
 }
