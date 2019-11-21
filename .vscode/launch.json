@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Poly",
+      "request": "launch",
+      "mainClass": "demo.java.Poly",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - InterfaceImplementExample",
       "request": "launch",
       "mainClass": "demo.java.InterfaceImplementExample",
