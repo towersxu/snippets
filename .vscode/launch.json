@@ -2,6 +2,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Phone",
+      "request": "launch",
+      "mainClass": "demo.java.reflect.Phone",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - PrimaryStudent",
+      "request": "launch",
+      "mainClass": "demo.java.inherit.PrimaryStudent",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - PrimaryStudent",
+      "request": "launch",
+      "mainClass": "demo.java.PrimaryStudent",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - Poly",
       "request": "launch",
       "mainClass": "demo.java.Poly",
