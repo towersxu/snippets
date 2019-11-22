@@ -73,4 +73,7 @@
 69. Java如何调用内部类？
 70. Java的反射有什么用？
 71. Java为什么有的人建议使用 List 来代替 Array？
+72. 什么是Java的序列化，序列化有什么作用？
+73. 什么是Vector，有什么优缺点，有什么替代方案？
+74. java.util.concurrent有什么用？
 
