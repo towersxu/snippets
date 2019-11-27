@@ -76,4 +76,14 @@
 72. 什么是Java的序列化，序列化有什么作用？
 73. 什么是Vector，有什么优缺点，有什么替代方案？
 74. java.util.concurrent有什么用？
-
+75. Promise有那些状态?
+76. 在Promise内部，先resolve，再rejected, 请问Promise的结果走的是then还是catch?
+77. Promise对象内部的异步方法已经resolve了之后，再去调用then方法，then方法会执行吗？
+78. Promise有什么优缺点？
+79. 如何取消或中断Promise?
+80. Promise then里面return false会被catch捕获吗？
+81. Promise的then方法返回的是Promise对象是原来的Promise对象吗？
+82. Promise all中的某个实例p2如果有catch方法，那么当这个实例p2报错后，整个Promise.all最终会调用resolve还是reject？
+83. 如果不关心成功或者失败，只希望判断所有的请求都已经结束，使用Promise应该怎么写呢？
+84. Promise.any和Promise.race的区别
+85. 如何将一个函数f，不管其是同步还是异步，使用Promise来处理它，在then里面得到执行结果？用catch方法处理f抛出的错误。
