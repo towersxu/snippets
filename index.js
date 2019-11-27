@@ -1,5 +1,7 @@
 let fs = require('fs')
 let path = require('path')
+const crypto = require('crypto');
+
 
 let mdPath = []
 function getMd (path) {
@@ -18,8 +20,8 @@ function getMd (path) {
 
 getMd(path.resolve(__dirname, './'))
 
-let dir = path.resolve(__dirname, '../source/_posts')
-delDir(dir)
+// let dir = path.resolve(__dirname, '../source/_posts')
+// delDir(dir)
 
 mdPath.map((p) => {
   let name = ''
@@ -29,28 +31,41 @@ mdPath.map((p) => {
     let p2 = RegExp.$2
     let pa = path.resolve(__dirname, `../source/_posts/${p1}/${p2}`)
     dirCreate(pa, function () {
-      fs.copyFileSync(p, path.resolve(pa, name))
+      let dirfile = path.resolve(pa, name)
+      // 判断目的file是否存在，如果存在
+      if (fs.existsSync(dirfile)) {
+        Promise.all([getFileHash(dirfile), getFileHash(p)])
+        .then(([hash, hash1]) => {
+          if (hash !== hash1) {
+            fs.copyFileSync(p, dirfile)
+          }
+        })
+        .catch(e => {
+          console.log(e)
+        })
+      } else {
+        fs.copyFileSync(p, dirfile)
+      }
     })
   }
 })
 
-function delDir(path, deep) {
-  let files = [];
-  if (fs.existsSync(path)) {
-    files = fs.readdirSync(path);
-    files.forEach((file, index) => {
-      let curPath = path + "/" + file;
-      if (fs.statSync(curPath).isDirectory()) {
-        delDir(curPath, true); //递归删除文件夹
-      } else {
-        fs.unlinkSync(curPath); //删除文件
-      }
+function getFileHash(path) {
+  return new Promise((resolve, reject) => {
+    const stream = fs.createReadStream(path);
+    const fsHash = crypto.createHash('sha256');
+
+    stream.on('data', function (d) {
+      fsHash.update(d);
     });
-    if (deep) {
-      fs.rmdirSync(path);
-    }
-  }
+
+    stream.on('end', function () {
+      const md5 = fsHash.digest('hex');
+      resolve(md5);
+    });
+  })
 }
+
 /**
  * 判断路径是否存在，如果不存在则不显示
  * @param {string} p 路径
@@ -69,3 +84,21 @@ function dirCreate(p, cb) {
     })
   }
 }
+
+// function delDir(path, deep) {
+//   let files = [];
+//   if (fs.existsSync(path)) {
+//     files = fs.readdirSync(path);
+//     files.forEach((file, index) => {
+//       let curPath = path + "/" + file;
+//       if (fs.statSync(curPath).isDirectory()) {
+//         delDir(curPath, true); //递归删除文件夹
+//       } else {
+//         fs.unlinkSync(curPath); //删除文件
+//       }
+//     });
+//     if (deep) {
+//       fs.rmdirSync(path);
+//     }
+//   }
+// }

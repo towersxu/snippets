@@ -2,7 +2,7 @@
 
 面试被问了promise，发现自己出了工作中用到的，好多细节点不了，今天细读一下阮一峰的Promise介绍，整理一下Promise的面试点。
 
-> Q1： Promise有那些状态
+> Q1： Promise有那些状态?
 
 在工作中其实一般不会涉及到Promise的状态，但是实际上理解Promise的状态会一些Promise问题的细节会有更深入的了解，也就能回答上Promise相关的看起来很奇怪的问题。
 
