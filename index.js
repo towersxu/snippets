@@ -5,6 +5,9 @@ const crypto = require('crypto');
 
 let mdPath = []
 function getMd (path) {
+  if (path.indexOf('node_module') !== -1) {
+    return
+  }
   if (!fs.statSync(path).isDirectory()) {
     if (/md$/i.test(path)) {
       mdPath.push(path)
