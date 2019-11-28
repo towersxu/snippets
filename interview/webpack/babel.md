@@ -18,3 +18,11 @@ babel在对js进行转换的时候，从babel 7开始，一般采用`@babel/pres
      - `解析`主要使用`Babylon`,将JavaScript字符串转换为抽象语法树。解析分为*词法分析*和*语法分析*两个阶段，词法分析就是根据最小有效单元，对字符串进行切割。语法分析就是把切割的字符串生成一个抽象语法树（js对象）
      - `转换`是使用`babel-traverse`浏览、分析和修改抽象语法树.
      - `生成`是使用`babel-generator`模块用来将转换后的抽象语法树（AST Abstract Syntax Tree）转化为Javascript 字符串.
+
+## babel 7的新特性
+
+1. 引入了`babel.config.js`, 这样根据方便找到babel的配置，并进行覆盖。使用`babel.config.js`, 可以允许在项目的不同地方进行不同的配置。
+2. 支持typescript
+3. `babel-plugin-macros`: babel-plugin-macros 要求开发者必须显式地导入 Macro，它会遍历匹配所有导入语句，如果导入源匹配/[./]macro(.js)?$/正则，就会认为你在启用Macro. babel-macro主要目的是在编码阶段告诉babel这里有自定义的写法，不使用插件是因为很多项目使用了统一配置，对于项目的配置是强约束的。比如`create-react-app`将所有的项目构建逻辑都封装在react-scripts 服务中,它是按照React社区的最佳实践给你准备的，为了保护封装带来的红利，它不推荐你去手动配置Webpack、Babel.
+
+> @babel/template可以将字符串代码解析成 AST，当然直接使用parse方法解析也是可以的。
