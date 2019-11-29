@@ -17,3 +17,5 @@
 [AST for JavaScript developers中文翻译](https://www.jianshu.com/p/019d449a9282)
 
 [JavaScript Reflect Metadata 详解](https://www.jianshu.com/p/653bce04db0b)
+
+[爱恨交织的红黑树](https://mp.weixin.qq.com/s/oisJz1vz6z3N8G8xyJWI7Q)
