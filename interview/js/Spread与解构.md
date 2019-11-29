@@ -20,7 +20,7 @@ ajax.then(function({ data: data1 = 22 }) {
 })
 ```
 
-如果上面的代码可能出现声明也不返回，会不会报错
+如果上面的代码可能出现什么也不返回，会不会报错
 
 ```js
 ajax.then(function({ data: data1 = 22 } = {}) {
