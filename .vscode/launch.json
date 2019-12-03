@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - LengthTest",
+      "request": "launch",
+      "mainClass": "demo.java.LengthTest",
+      "projectName": "shippets_48a5c638"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - ListTest",
       "request": "launch",
       "mainClass": "demo.java.collection.ListTest",

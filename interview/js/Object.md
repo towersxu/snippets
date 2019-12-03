@@ -1,4 +1,4 @@
-# 对象
+# ES6对象面试题整理
 
 > Q1: Object.keys(a)、Object.getOwnPropertyNames(a)、Reflect.ownKeys(a)以及for in、Object.getOwnPropertyDescriptors的区别？
 
@@ -33,7 +33,7 @@ Object.is(+0, -0) // false
 Object.is(NaN, NaN) // true
 ```
 
-> Q4: Object.assign的参数可以不是对象嘛？
+> Q4: Object.assign的参数可以不是对象吗？
 
 可以，参数不对，会尝试将其转换为对象，但是如果是null和undefined无法转换为对象，所以它们作为参数会报错。
 如果非对象参数出现在源对象的位置（即非首参数），那么处理规则有所不同。

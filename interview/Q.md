@@ -87,3 +87,28 @@
 83. 如果不关心成功或者失败，只希望判断所有的请求都已经结束，使用Promise应该怎么写呢？
 84. Promise.any和Promise.race的区别
 85. 如何将一个函数f，不管其是同步还是异步，使用Promise来处理它，在then里面得到执行结果？用catch方法处理f抛出的错误。
+86. 在js最开始使用let定义一个变量，这个变量会不会绑定到window上？
+87. 什么是块级作用域？
+88. 什么是暂时性死区？
+89. 如果想要声明一个对象为常量，应该怎么做？
+90. js目前有那些声明变量的方法?
+91. Object.keys(a)、Object.getOwnPropertyNames(a)、Reflect.ownKeys(a)以及for in、Object.getOwnPropertyDescriptors的区别？
+92. 在ES6中，如何实现class的私有属性？
+93. Object.is有什么用，和===有什么区别？
+94. Object.assign的参数可以不是对象吗？
+95. Object.assign可以拷贝原型链上的属性吗？不可枚举的呢？Symbol呢？
+96. Object.assign可以用在数组上吗？
+97. Object.assign能拷贝get和set属性吗，Symbol和enumerable为false的属性呢？
+98. 如果想要拷贝一个对象，并且还想合并其get和set之类所有的属性怎么做？
+99. 如何将一个对象设置为另一个对象的原型？
+100. 如何使用for of遍历对象，能遍历到原型链上的对象吗？能遍历enumerable为false的属性吗？能遍历Symbol吗？
+101. Map与Object的区别是？
+102. 如何给请求返回的data设置默认值
+103. 如果希望把上面的data改成另一个名字呢？因为data在前面已经有声明的了。
+104. 如何将一个对象中除了某些属性之外，剩下的属性作为一个新对象。
+105. 解构是否能用到Set上面？
+106. 是否能解构字符串？
+107. 解构那些情况可以用括号，那些情况不能用括号？
+108. 如何使用解构交换两个变量的值？
+109. 
+
