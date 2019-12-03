@@ -19,3 +19,5 @@
 [JavaScript Reflect Metadata 详解](https://www.jianshu.com/p/653bce04db0b)
 
 [爱恨交织的红黑树](https://mp.weixin.qq.com/s/oisJz1vz6z3N8G8xyJWI7Q)
+
+[美团点评点餐 Nuxt.js 实战](https://juejin.im/post/598aabe96fb9a03c335a8dde)
