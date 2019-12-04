@@ -107,10 +107,59 @@ Object.create(
 对象本地是不可迭代的，但是可以使用Object.keys、Object.values、Object.entries获取对象的属性和值组成的数组。
 他们都不包括enumerable为false和Symbol()的属性。
 
+注意：数组也有keys、values、entries三个方法。但是数组可以直接for of遍历。Set也是这样。
+
 > Q12: Map与Object的区别是？
 
 Map和Object都是键值对的集合（Hash结构），但是Map支持各种类型的值作为键。包括对象。
 Map判断键是否相同，采用的是判断是地址是否是同一个地址，这样的优点是对别人的库进行扩展的时候，
 如果采用对象作为键，则不会对别人的库进行污染。
 
+当然：一般这种情况要对象的扩展，我们可以用Symbol
+
 Map还可以使用for of对齐进行遍历，而Object不可以。
+
+> Q13: Symbol的描述有什么用
+
+在Symbol作为一个对象的函数的key的时候，这个函数的name属性返回的是Symbol值的描述
+
+```js
+var key = Symbol('description')
+var ob = {
+  [key] () {}
+}
+console.log(ob[key].name) // [description]
+console.log(key.toString()) // Symbol(desription)
+
+```
+
+> Q14: 可枚举属性enumerable被设置为false，会影响那些情况
+
+1. 无法被`for...in`循环遍历
+2. 无法被`Object.keys`获取属性
+3. 无法被JSON.stringify序列化
+4. 无法被`Object.assign`克隆
+  
+ES6规定，Class的原型的方法都是不可枚举的。
+
+> q15: `super`只能用到class的constructor中吗
+
+不是，super还可以用到直接对象的方法里面，用来指对象。
+
+```js
+const proto = {
+  foo: 'hello'
+};
+const obj = {
+  foo: 'world',
+  find() {
+    return super.foo;
+  }
+};
+Object.setPrototypeOf(obj, proto);
+obj.find() // "hello"
+```
+
+注意，super关键字表示原型对象时，只能用在对象的方法之中，用在其他地方都会报错。
+
+JavaScript 引擎内部，super.foo等同于Object.getPrototypeOf(this).foo（属性）或Object.getPrototypeOf(this).foo.call(this)（方法）。
