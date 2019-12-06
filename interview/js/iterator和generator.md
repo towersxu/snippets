@@ -173,3 +173,54 @@ async function getAll () {
   console.log(new Date().getTime() - d)
 }
 ```
+
+## 什么是异步遍历器
+
+ES2018 引入了“异步遍历器”（Async Iterator），为异步操作提供原生的遍历器接口，即value和done这两个属性都是异步产生。
+
+异步遍历器的最大的语法特点，就是调用遍历器的next方法，返回的是一个 Promise 对象。
+
+```js
+async function* createAsyncIterable(iterable) {
+  for (const elem of iterable) {
+    yield elem;
+  }
+}
+function getName () {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(3000)
+    }, 3000)
+  })
+}
+function getAge() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(4000)
+    }, 8000)
+  })
+}
+const asyncIterable = createAsyncIterable([getName(), getAge()]);
+const asyncIterator = asyncIterable[Symbol.asyncIterator]();
+async function f () {
+  console.log(await asyncIterator.next())
+  console.log(await asyncIterator.next())
+  console.log(await asyncIterator.next())
+}
+f()
+```
+
+从上面的代码可以看到使用`async function*`的方法返回一个AsyncGenerator对象，然后可以通过Symbol.asyncIterator对其进行遍历。
+
+这里的`async function *`就是异步Generator函数，异步 Generator 函数就是async函数与 Generator 函数的结合。
+
+对应AsyncGenrator对象，也可以用for await...of循环
+
+```js
+async function f() {
+  for await (const x of asyncIterable) {
+    console.log(x);
+  }
+}
+f()
+```

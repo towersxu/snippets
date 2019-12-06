@@ -106,3 +106,20 @@ equal(0.1 + 0.2, 0.3);   //true
 指数运算符的特点是右结合，而不是常见的左结合。所以`2**3**2`等于`2**9`为512
 
 V8 引擎的指数运算符与Math.pow的实现不相同，对于特别大的运算结果，两者会有细微的差异。
+
+## 字符串与数字相加、对象与数字相加，其中的类型转换规则是什么
+
+对象调用valueOf方法, 数组调用join方法, 如果两边都是数字，直接相加。否则转换为字符串相加。
+
+## `{} + []`和`[] + {}`相等吗
+
+在Chrome 控制台中
+
+```js
+{} + [] // 0
+[] + {} // [object object]
+{} + [] === [] + {} // true
+```
+
+这里是Chrome的控制台的问题。
+[https://stackoverflow.com/questions/41124252/why-does-evaluate-to-true](https://stackoverflow.com/questions/41124252/why-does-evaluate-to-true)
