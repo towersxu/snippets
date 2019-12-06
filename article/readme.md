@@ -21,3 +21,5 @@
 [爱恨交织的红黑树](https://mp.weixin.qq.com/s/oisJz1vz6z3N8G8xyJWI7Q)
 
 [美团点评点餐 Nuxt.js 实战](https://juejin.im/post/598aabe96fb9a03c335a8dde)
+
+[TCP为啥要3次握手和4次挥手？握两次手不行吗？](https://mp.weixin.qq.com/s/ANBpgkprBbB3g1UgvvOBjw)

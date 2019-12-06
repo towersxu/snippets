@@ -8,7 +8,7 @@ class PersonProtected {
         if (name.startsWith('_')) {
           throw new Error('Accessing to a private property is not allowed');
         } else {
-          return target[name];
+          return Reflect.get(target, name);
         }
       }
     });
@@ -19,6 +19,9 @@ class PersonProtected {
   set name(name) {
     this._private = name;
   }
+  getName () {
+    return Reflect.get(this, 'private', {})
+  }
   greeting(person) {
     return `hi ${person.name}`;
   }
@@ -28,7 +31,7 @@ class PersonProtected {
 }
 
 let ivanPersonProtectedInstance = new PersonProtected('Ivan');
-
-console.log(ivanPersonProtectedInstance.greeting(ivanPersonProtectedInstance))
+console.log(ivanPersonProtectedInstance.getName())
+// console.log(ivanPersonProtectedInstance.greeting(ivanPersonProtectedInstance))
 // console.log(ivanPersonProtectedInstance._name)
 // ivanPersonProtectedInstance._addFirst('miss')

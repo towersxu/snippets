@@ -96,3 +96,7 @@ proxy.foo = 1           // TypeError again
 delete proxy.foo;       // still TypeError
 typeof proxy            // "object", typeof doesn't trigger any trap
 ```
+
+## Proxy.revocable的用处
+
+Proxy.revocable的一个使用场景是，目标对象不允许直接访问，必须通过代理访问，一旦访问结束，就收回代理权，不允许再次访问。

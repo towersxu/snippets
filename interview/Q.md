@@ -162,4 +162,36 @@
 158. `super`只能用到class的constructor中吗
 159. WeakSet的成员能是数字吗
 160. WeakMap在实际开发中有那些使用场景
+161. proxy支持哪些拦截操作
+162. proxy代理的时候，怎么处理this指向问题
+163. Proxy.revocable有什么用
+164. ES6为什么要新增Reflect对象
+165. Reflect有哪些方法
+166. ES6 import命令如何对导入的变量进行重命名
+167. import命令和import()函数的区别
+168. 可以直接写`export 42`吗
+169. 如何实现跨模块声明常量
+170. ES6 module与CommonJS的差别
+171. ES6和CommonJS是如何解决循环加载的问题
+172. Reflect和Proxy里面`get`和`set`方法的receiver参数是什么，和target有什么区别
+173. 请手写一个实现一个对象可遍历的方法
+174. 如何处理iterator遍历中断和异常
+175. `for...of`、`for...in`、`forEach`、`for`循环的异同
+176. 什么是generator
+177. yield表达式有返回值吗
+178. generator怎么实现在外部调用的过程中，向其内部抛出异常
+179. 如何让Generator函数返回一个正常的对象实例，既可以用next方法，又可以获得正常的this
+180. generator有什么用
+181. async与generator的区别
+182. 如何使用async实现请求失败重复指定次数再次请求
+183. await是继发关系，那么如何用await实现多个请求并发
+184. 如何向一个现成的class添加新的方法
+185. class必须要用new调用，如果在ES5中模拟这个特性
+186. 如何判断一个类是否继承了另一个类
+187. class里面的方法还可以用use strict吗
+188. class里面的方法的this一定指向的类的实例吗
+189. class的static方法能用this吗
+190. class继承的时候super指向的是什么
+191. 子类普通方法中通过super调用父类的方法时，父类方法中的this指向的是什么
+192. 为什么ES6可以自定义原生数据结构（比如Array、String等）的子类，而`ES5`无法做到的
 
