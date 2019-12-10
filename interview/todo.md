@@ -1,16 +1,14 @@
-# 面试准备进度
+# TODO
 
-## 待完成
+## 前端基础
 
-### 前端基础
+### html
 
-#### html
-
-#### css
+### css
 
 flex: 50%
 
-#### js
+### js
 
 - 对象的方法defineProperty, Object.fronze
 
@@ -24,25 +22,24 @@ flex: 50%
 
 - typescript 30%
 
-#### es6
+### es6
 
-- proxy
-- reflect
+90%
 
-#### vue
+### vue
 
 - api复习一遍
 - 源码阅读 80%
 
-#### react
+### react
 
 - refs: [你想知道的关于 Refs 的知识都在这了](https://juejin.im/post/5db6506d6fb9a0207326a928)
 
-#### nodejs
+### nodejs
 
 todo: [分享 10 道 Nodejs 进程相关面试题](https://juejin.im/post/5d082214f265da1bb564f97b)
 
-### 测试
+## 测试
 
 jest
 
@@ -50,12 +47,11 @@ mocha
 
 istanbul
 
-
-#### 浏览器
+## 浏览器
 
 - 浏览器渲染流程 80%
 
-### 扩展知识
+## 扩展知识
 
 https
 
@@ -71,11 +67,11 @@ linux
 - scp
 - sftp
 
-### 刷题
+## 刷题
 
 [Daily-Interview-Question](https://github.com/Advanced-Frontend/Daily-Interview-Question)
 
-### 算法
+## 算法
 
 算法思想： 贪心、回溯、分治、动态规划 80%
 
@@ -87,7 +83,7 @@ leetcode
 
 [设计模式题](https://mp.weixin.qq.com/s/Q1AZB-Y1aFT0uUorcJhBBA)
 
-### java
+## java
 
 java基础语法
 
@@ -95,11 +91,11 @@ java基础语法
 
 线程安全：在堆内存中的数据由于可以被任何线程访问到，在没有限制的情况下存在被意外修改的风险。
 
-### nginx
+## nginx
 
-### redis
+## redis
 
-### 数据库
+## 数据库
 
 sql
 
