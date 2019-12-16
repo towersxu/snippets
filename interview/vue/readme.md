@@ -120,3 +120,7 @@ Vue.component('animated-integer', {
 组件是可以在它们自己的模板中调用自身的。不过它们只能通过 name 选项来做这件事
 
 使用webpack的异步import()，能解决多组件循环引用。
+
+## v-slot
+
+缩写`#`
