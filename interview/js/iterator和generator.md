@@ -224,3 +224,33 @@ async function f() {
 }
 f()
 ```
+
+## 下面的代码打印结果是
+
+```js
+// 下面这段代码打印的值是多少
+var a = 9
+function* bar() {
+  a = yield 4
+  var b = a + (yield 5) + a
+  return b;
+}
+var it = bar()
+console.log(it.next(1).value)
+console.log(it.next(2).value)
+a = 10
+console.log(it.next(3).value)
+
+```
+
+打印4、5、15
+
+首先执行`it.next(1).value`的时候，传递的`1`是无效的，其value是yield返回的值，即`4`
+
+再次执行`it.next(2).value`的时候，返回的是第一个yield的值，即`5`
+
+最后`it.next(3).value`的时候，返回的b的值，注意，a + (yield 5) + a 等同于 2 + 3 + 10，
+
+第一个2是上面的next(2)传进入的，3是next(3)传入的，10是因为a在外部改变了。
+
+为什么前一个`a`不会被外部改变呢？因为前一个a在遇到yield 5的时候，就被加入执行上下文栈（*the execution context statc*）中，然后`yield 5`中断执行，后面的a在中断后被改变为10。
