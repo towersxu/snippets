@@ -26,14 +26,32 @@
   参考链接：
   [getContext('2d') returns null in Safari 10](https://stackoverflow.com/questions/40482586/getcontext2d-returns-null-in-safari-10/43482153)
 
-  [Maximum size of a <canvas> element](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element)
+  [Maximum size of a `<canvas>` element](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element)
 
 5.IOS webview禁止识别手机号，邮箱等
 
-```html
-  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no" />
-```
+    ```html
+      <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no" />
+    ```
 
 6.有些手机上传的图片会被旋转90度
 
   可以尝试用exif.js来解决
+
+7.ISO webview中调用Geolocation API，可能导致https环境无法加http图片
+
+  初步怀疑是调用了地理位置API会导致CSP策略提升，记得那里看到过，但是没有搜索到。
+
+  解决办法，首先，由于H5服务这套业务逻辑，是不可以然让所有的业务服务器支持https的，因为有的服务是客户自己定制的。
+
+  所以只有在H5服务上用nginx做图片代理, 即业务访问的图片`http://b.com/zbpb/api/getfile.do?path=duty/image/reduce/a.jpeg`可以通过`https://h5.com/image-proxy?url=http://b.com/zbpb/api/getfile.do?path=duty/image/reduce/a.jpeg`来访问。
+
+    ```shell
+    location ~/image-proxy {
+        if ($query_string ~* ^(.*)url=(.*)$){
+            set $pic_url $2;
+            proxy_pass $pic_url;
+        }
+    }
+    ```
+另外，在本地模拟的时候，出现502错误，是因为*在Ngnix中如果用变量作为反向代理的地址时，可能会出现“no resolver defined to resolve xxx.xxx”的问题*，原因是 Nginx 0.6.18以后的版本中启用了一个resolver指令，在使用变量来构造某个server地址的时候一定要用resolver指令来指定DNS服务器的地址，所以解决这个问题的方法很简单：在nginx的配置文件中的http{}部分添加一行DNS解析即可，注意，要写在nginx配置的http{}内。[参考地址](https://blog.csdn.net/ywq935/article/details/81984878)
