@@ -1,10 +1,10 @@
 # 移动端开发遇到的问题
 
-1. 华为nova系列手机webview百度定位问题
+## 华为nova系列手机webview百度定位问题
 
   当时没有手机在身边复现，但是武研测试有。H5的地理位置API失败，百度地图自带的获取位置也失败。换成高德地图就好了。
 
-2.IOS.12.2 `input type="file"`使用trigger('click')的方式触发上传，在校信上失效的问题，微信有效。
+## IOS.12.2 `input type="file"`使用trigger('click')的方式触发上传，在校信上失效的问题，微信有效。
 
   微信使用的自带的x5webview，校信使用的是系统webview，另外，QQ扫码进入页面使用是系统webview,点击聊天内容的链接进入的用的是x5webview???
   
@@ -15,11 +15,11 @@
   参考链接:
   [WebKit on iOS ignores trigger(‘click’) on file input](https://forums.meteor.com/t/webkit-on-ios-ignores-trigger-click-on-file-input/29828)
 
-3.Iphone 5c H5应用按home键退出，然后重新进入，有几率导致app卡死和闪退的问题。
+## Iphone 5c H5应用按home键退出，然后重新进入，有几率导致app卡死和闪退的问题。
 
     原因：查看了该H5应用代码，发现热点是使用canvas实现，但是canvas写的有问题。热点的涟漪效果的清除画布没有直接整体清除，而是一个一圈一圈的清除外部边框来实现涟漪的缩小效果(ノ｀Д`)ノ 。
 
-4.canvas内存问题， getContext('2d') returns null in Safari
+## canvas内存问题， getContext('2d') returns null in Safari
 
   出现原因，一同事在使用canvas生成base64的时候，连续创建了几十个canvas，然后就报这个错了。后来改成了创建一个canvas来处理就没有这个问题了。
 
@@ -28,17 +28,17 @@
 
   [Maximum size of a `<canvas>` element](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element)
 
-5.IOS webview禁止识别手机号，邮箱等
+## IOS webview禁止识别手机号，邮箱等
 
     ```html
       <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no" />
     ```
 
-6.有些手机上传的图片会被旋转90度
+## 有些手机上传的图片会被旋转90度
 
   可以尝试用exif.js来解决
 
-7.ISO webview中调用Geolocation API，可能导致https环境无法加http图片
+## ISO webview中调用Geolocation API，可能导致https环境无法加http图片
 
   初步怀疑是调用了地理位置API会导致CSP策略提升，记得那里看到过，但是没有搜索到。
 
@@ -55,3 +55,11 @@
     }
     ```
 另外，在本地模拟的时候，出现502错误，是因为*在Ngnix中如果用变量作为反向代理的地址时，可能会出现“no resolver defined to resolve xxx.xxx”的问题*，原因是 Nginx 0.6.18以后的版本中启用了一个resolver指令，在使用变量来构造某个server地址的时候一定要用resolver指令来指定DNS服务器的地址，所以解决这个问题的方法很简单：在nginx的配置文件中的http{}部分添加一行DNS解析即可，注意，要写在nginx配置的http{}内。[参考地址](https://blog.csdn.net/ywq935/article/details/81984878)
+
+## ios WKWebView之视频无法播放
+
+[ios WKWebView之视频无法播放](https://blog.csdn.net/weixin_40200876/article/details/86629900)
+
+ios视频不自动全屏播放处理, 给video同时加上 webkit-playsinline和playsinline就好了，前者针对I0S9，后者针对IOS10和11
+
+[加了webkit-playsinline，ios9.2.3可以不全屏，但是IOS11还是会自动全屏](https://segmentfault.com/q/1010000012768330?sort=created)

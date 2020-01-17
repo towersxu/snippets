@@ -70,6 +70,16 @@
       "program": "${file}"
     },
     {
+      "type": "node",
+      "request": "launch",
+      "name": "Ts",
+      "program": "${file}",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": [
+        "${workspaceFolder}/out/**/*.js"
+      ]
+    },
+    {
       "name": "Typescript Inspector",
       "type": "node",
       "request": "launch",
