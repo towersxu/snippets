@@ -97,6 +97,8 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
+注意这里的scope, 在我们平时开发单页面应用的时候，往往在开发的过程中是根域名。但是一般情况下，sw.js会放到static, 此时就需要webpack中配置处理了。不然scope不一致，会无法缓存。
+
 2）在sw.js中监听安装阶段，声明需要缓存的文件列表
 
 这里是使用的caches来缓存的。不能使用localStorage，因为他是同步的。可以使用indexedDB
