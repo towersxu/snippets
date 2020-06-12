@@ -25,3 +25,5 @@
 [TCP为啥要3次握手和4次挥手？握两次手不行吗？](https://mp.weixin.qq.com/s/ANBpgkprBbB3g1UgvvOBjw)
 
 [JWT攻击手册：如何入侵你的Token](https://mp.weixin.qq.com/s/BH-gmMpHUkMvBcSBgJWnwA)
+
+[页面跳转时，统计数据丢失问题探讨](https://www.barretlee.com/blog/2016/02/20/navigator-beacon-api/)
