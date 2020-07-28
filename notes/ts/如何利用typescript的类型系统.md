@@ -127,6 +127,44 @@ a.then((r) => {
 
 当然，在我们实际的开发中，使用`new`运算符这种声明类型主要用处还是用在`class`被当做参数传递的情况。具体可以看typescript官方文档[interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
 
+## 一些不容易理解的例子
 
+
+- 如果我们想要定义一个特殊对象，这个对象的key是string, 值是一种统一的类型。也就是值可以全是数字，也可以全是字符串。当然，在实际开发中，可能是要求全是某种对象，比如要么全是男的`Man`，要么全是女的`Woman`。这个时候，我们应该怎么定义这种特殊对象的类型呢？
+
+```ts
+interface Dictionary<T> {
+  [index: string]: T;
+};
+
+let man1 = new Man()
+let man2 = new Man()
+
+const manData: Dictionary<Man> = {
+  'first': man1,
+  'second': man2,
+}
+
+let woman1 = new Woman()
+let woman2 = new Woman()
+
+const womanData: Dictionary<Man> = {
+  'first': woman1,
+  'second': woman2,
+}
+```
+
+从上面的代码可以看出，我们首先定义了一种类型`Dictionary<T>`, 这种类型的值是一个泛型。
+然后后面的具体使用的饿时候，我们再进一步其详细类型。
+
+同理的还有`Record`, 我们在某些ts项目中，有点eslint，要求我们不要使用`Object`， 而是使用`Record<string, any>`来替代.
+
+因为`Record`已经在`lib.d.ts`中提前定义好了。具体定义如下:
+
+```ts
+type Record<K extends keyof any, T> = {
+  [P in K]: T;
+};
+```
 
 
