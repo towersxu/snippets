@@ -1,4 +1,4 @@
-# 如何利用typescript的类型系统
+# typescript的泛型
 
 > 本文并不是typescript类型的语法介绍文章，而是讲讲我们开发人员，如何利用typescript的类型系统的优点，进行更高效的开发。
 
