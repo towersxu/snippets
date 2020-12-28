@@ -111,3 +111,22 @@ function postJson() {
   xhr.open('POST', params.url)
   xhr.send('hello world')
 }
+
+/**
+ * 跨域请求
+ * 如果跨域服务器需要校验请求合法性，一般要求前端发起ajax请的时候带上withCredentials
+ * XMLHttpRequest.withCredentials  属性是一个Boolean类型，
+ * 它指示了是否该使用类似cookies,authorization headers(头部授权)
+ * 或者TLS客户端证书这一类资格证书来创建一个跨站点访问控制（cross-site Access-Control）请求。
+ * 在同一个站点下使用withCredentials属性是无效的。
+ * 
+ * 当配置了xhr.withCredentials = true时，
+ * 必须在后端增加 response 头信息Access-Control-Allow-Origin，
+ * 且必须指定域名，而不能指定为*。
+ */
+function corsGet() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'http://example.com/', true);
+  xhr.withCredentials = true;
+  xhr.send(null);
+}
