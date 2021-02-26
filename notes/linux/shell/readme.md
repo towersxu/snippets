@@ -7,3 +7,10 @@
 ```
 
 >表示将标准输出写入startup.log中，2>&1表示把错误也输入到startup中
+
+
+查找文件体积超过1000M的文件
+
+```shell
+find / -type f -size +1000M
+```

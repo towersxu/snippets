@@ -212,3 +212,27 @@
 208. vue如何支持组件循环递归引用的
 209. 给定数字n，一行代码创建一个数字0-n的数组
 210. 在shadowDOM里面使用css变量var的时候，如何声明变量
+
+
+## 20200225
+
+1. 聊聊用户统一认证方案
+2. typescript泛型怎么用？什么情况下用？
+3. 解决混合模式中H5与APP通信问题，手写实现一个封装的H5通信的方案，让用的时候像我们前端习惯的promise then方式。
+4. 知识库，搜索，智能提示。什么是防抖(debounce)和节流(throttle)，手写一个防抖(debounce)？
+  - throttle常用于连续事件的事件处理函数。
+  - debounce只有当连续事件停止后的一小段时间后再触发一次，连续事件结束后可能只触发一次
+  - throttle会在连续事件的过程中，每隔一段时间至少触发一次，连续事件结束后触发不止一次
+  ```
+    throttle适用场景
+    Throttling a scroll event in infinite scroll（demo case）
+    Throttling a mousemove/touchmove event handler in canvas
+
+    debounce适用场景
+    Debouncing a input event handler （this example explain this use case）
+    Debouncing a resize event handler
+    Debouncing a save function in an autosave feature
+  ```
+5. webpack babel eslint这些工程化相关的工具，是如何配合起来，让我们写的代码在浏览器运行的？
+6. 常见的性能优化方案有哪些？
+7. tinymce这种富文本编辑器，了解过是如何实现的吗？
