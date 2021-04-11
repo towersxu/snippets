@@ -150,10 +150,6 @@
 
 [网关的QoS技术]([master](https://github.com/towersxu/snippets/blob/master/notes/network/qos.md))
 
-### nodejs笔记
-
-npm link
-
 ### 动画
 
 [动画相关的文章](https://github.com/towersxu/snippets/blob/master/notes/animate/%E5%8A%A8%E7%94%BB%E7%9B%B8%E5%85%B3%E7%9A%84%E6%96%87%E7%AB%A0.md)
