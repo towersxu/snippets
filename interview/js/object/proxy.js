@@ -3,14 +3,19 @@ const person = observable({
   age: 20
 });
 
+const person1 = observable({
+  name: '王五',
+  age: 66
+})
+
 function print() {
   console.log(`print: ${this.name}, ${this.age}`)
 }
 let deps = new Set()
-
 observe(print);
-person.name = '李四';
-
+person.name = '李四'; // print: 李四, 20
+person.age = '11'; // print: 李四, 11
+person1.name = '刘麻子' // print: 刘麻子, 66
 function observable(obj) {
   return new Proxy(obj, {
     set (target, name, value, receiver) {
